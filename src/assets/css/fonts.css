@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Lulo Clean";
+  font-weight: 400;
+  src: url(/assets/fonts/lulo/cleanone-webfont.woff);
+}
+
+@font-face {
+  font-family: "Lulo Clean";
+  font-weight: 700;
+  src: url(/assets/fonts/lulo/cleanonebold-webfont.woff);
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/fonts/merriweather/merriweatherbolditalic-webfont.woff);
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  font-weight: 700;
+  src: url(/assets/fonts/avenirNext/avenirNextBold.woff);
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  font-weight: 500;
+  font-style: italic;
+  src: url(/assets/fonts/avenirNext/avenirNextMediumItalic.woff);
+}
+
+@font-face {
+  font-family: "BaskervilleMTStd-Bold";
+  font-weight: 700;
+  src: url(/assets/fonts/baskerville/baskervilleBold.woff);
+}

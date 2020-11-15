@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@import "./button.css";
+@import "./fonts.css";
+@import "./controls.css";
+@import "./template.css";
+@import "./stripes.css";
+
+.grid-12 {
+  @apply grid-cols-12;
+  @apply gap-2;
+  @apply grid;
+}
+
+.grid-2 {
+  @apply grid-cols-2;
+  @apply grid;
+  @apply gap-y-2;
+  @apply gap-x-2;
+}

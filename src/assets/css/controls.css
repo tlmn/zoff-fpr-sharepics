@@ -1,0 +1,34 @@
+label {
+  @apply uppercase;
+  @apply font-lulo;
+  @apply font-bold;
+  @apply text-white;
+  @apply block;
+  @apply ease-in-out;
+  @apply duration-200;
+  @apply transition-all;
+  @apply mb-1;
+}
+
+input {
+  @apply ease-in-out;
+  @apply duration-200;
+  @apply transition-all;
+}
+
+.inputGroup {
+  @apply mb-1;
+}
+
+label + input[type="checkbox"] {
+  display: inline-block !important;
+}
+
+select {
+  @apply py-2;
+}
+
+.label--inline {
+  @apply inline-block;
+  @apply mr-2;
+}

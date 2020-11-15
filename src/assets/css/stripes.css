@@ -1,0 +1,20 @@
+.stripeContainer {
+  @apply relative;
+  @apply inline-block;
+}
+
+.stripeText {
+  @apply z-10;
+  @apply relative;
+}
+.stripeElement {
+  @apply absolute;
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  height: 95%;
+  @apply left-0;
+  @apply top-0;
+}
+.stripeElement--skewed {
+  transform: skew(-6deg);
+}

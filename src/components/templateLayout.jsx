@@ -1,17 +1,19 @@
-import Layout from "../components/layout";
-import { Link } from "gatsby";
 import React from "react";
+import { getProperty } from "../lib/lib";
 
-export default ({ children }) => (
-  <Layout>
-    <div className="container grid-12">
-      <div className="col-span-12 py-1 text-white">
-        ←
-        <Link to="/" className="hover:underline uppercase text-white font-lulo ml-1">
-          zurück zur Auswahl
-        </Link>
-      </div>
+export default ({ state, children }) => (
+  <div className="col-span-6 relative">
+    <div
+      className={`template ${!state.templateScale.isScaled && `relative`}`}
+      style={{
+        transform:
+          state.templateScale.isScaled &&
+          `scale(${getProperty({ state }, "data.templateScale.value")})`,
+        transformOrigin: "0 0",
+      }}
+      ref={state.ref}
+    >
       {children}
     </div>
-  </Layout>
+  </div>
 );

@@ -2,13 +2,14 @@ import React, { useRef, useState } from "react";
 
 import Controls from "../../../templates/zitat/controls";
 import Template from "../../../templates/zitat/template";
-import TemplateLayout from "../../../components/templateLayout";
+import TemplateWrapper from "../../../components/templateWrapper";
 
 export default () => {
   const [state, setState] = useState({
     data: {
       body: {
-        content: "In einer feministischen Utopie kennen Menschenrechte keine Grenzen",
+        content:
+          "In einer feministischen Utopie kennen Menschenrechte keine Grenzen",
         scale: { value: 60, range: [50, 70] },
       },
       author: {
@@ -31,11 +32,11 @@ export default () => {
       },
     },
     ref: useRef(null),
-    templateScale: true,
+    templateScale: { isScaled: true, value: 0 },
   });
 
   return (
-    <TemplateLayout>
+    <TemplateWrapper state={state} setState={setState}>
       <div className="col-span-6">
         <Template state={state} setState={setState} />
       </div>
@@ -44,6 +45,6 @@ export default () => {
           <Controls state={state} setState={setState} />
         </div>
       </div>
-    </TemplateLayout>
+    </TemplateWrapper>
   );
 };

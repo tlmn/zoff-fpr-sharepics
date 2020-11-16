@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Controls from "../../../templates/paritaet-zitat/controls";
 import Template from "../../../templates/paritaet-zitat/template";
-import TemplateLayout from "../../../components/templateLayout";
+import TemplateWrapper from "../../../components/templateWrapper";
 
 export default () => {
   const [state, setState] = useState({
@@ -25,11 +25,11 @@ export default () => {
       },
     },
     ref: useRef(null),
-    templateScale: true,
+    templateScale: { isScaled: true, value: 0 },
   });
 
   return (
-    <TemplateLayout>
+    <TemplateWrapper state={state} setState={setState}>
       <div className="col-span-6">
         <Template state={state} setState={setState} />
       </div>
@@ -38,6 +38,6 @@ export default () => {
           <Controls state={state} setState={setState} />
         </div>
       </div>
-    </TemplateLayout>
+    </TemplateWrapper>
   );
 };

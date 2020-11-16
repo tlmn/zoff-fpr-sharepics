@@ -87,28 +87,28 @@ export const colors = [
 
 export const templates = [
   {
-    name: "Zitat",
+    name: "FPR,<br />Zitat",
     link: "templates/zitat",
     thumbnailSrc: "../assets/images/templates/zitat.jpg",
   },
   {
-    name: "Zitat mit Bild",
+    name: "FPR + BFW,<br />Zitat + Bild",
     link: "templates/zitat-mit-bild",
     thumbnailSrc: "../assets/images/templates/zitat-mit-bild.jpg",
   },
   {
-    name: "Parität Slogan",
+    name: "FPR + NbF,<br/>Zitat",
+    link: "templates/zitat-externe",
+    thumbnailSrc: "../assets/images/templates/zitat-externe.jpg",
+  },
+  {
+    name: "Parität,<br />Slogan",
     link: "templates/paritaet-slogan",
     thumbnailSrc: "../assets/images/templates/paritaet-slogan.jpg",
   },
   {
-    name: "Parität Zitat",
+    name: "Parität,<br />Zitat",
     link: "templates/paritaet-zitat",
     thumbnailSrc: "../assets/images/templates/paritaet-zitat.jpg",
-  },
-  {
-    name: "Zitat Externe",
-    link: "templates/zitat-externe",
-    thumbnailSrc: "../assets/images/templates/zitat-externe.jpg",
   },
 ];

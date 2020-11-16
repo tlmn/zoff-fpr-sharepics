@@ -19,7 +19,7 @@ export default ({ state, setState }) => {
         />
       </div>
       <div className="col-span-2">
-        <label htmlFor="data.headline.content">Headline</label>
+        <label htmlFor="data.headline.content">Dachzeile</label>
         <input
           id="data.headline.content"
           onChange={(e) =>
@@ -32,7 +32,7 @@ export default ({ state, setState }) => {
           value={getProperty({ state, setState }, "data.headline.content")}
         />
       </div>
-      <div className="col-span-2">
+      <div className="col-span-1">
         <label htmlFor="data.body.content">Text</label>
         <textarea
           id="data.body.content"
@@ -48,14 +48,16 @@ export default ({ state, setState }) => {
         >
           {state.data.body.content}
         </textarea>
+      </div>
+      <div className="col-span-1">
         <TextScaleRange
           state={state}
           setState={setState}
           propertyPath="data.body.scale"
         />
       </div>
-      <div className="col-span-2">
-        <label htmlFor="data.subline.content">Unterzeile</label>
+      <div className="col-span-1">
+        <label htmlFor="data.subline.content">Text 2 &amp; Absender</label>
         <textarea
           id="data.subline.content"
           onChange={(e) =>
@@ -69,7 +71,7 @@ export default ({ state, setState }) => {
           {getProperty({ state, setState }, "data.subline.content")}
         </textarea>
       </div>
-      <div className="col-span-2">
+      <div className="col-span-2 col-start-1">
         <label htmlFor="data.logo.type" className="label--inline">
           Logo auswählen
         </label>
@@ -82,6 +84,7 @@ export default ({ state, setState }) => {
               e.target.value
             )
           }
+          className="select-css"
         >
           <option value="FPR">FPR</option>
           <option value="NbF">NbF</option>

@@ -10,6 +10,7 @@ export default ({ state, setState, propertyPath, availableColors = [] }) => (
     }
     value={getProperty({ state }, propertyPath)}
     id={propertyPath}
+    className="select-css"
   >
     {colors.map(
       (color) =>

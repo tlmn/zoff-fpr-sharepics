@@ -29,7 +29,7 @@ export default () => {
         <Template state={state} setState={setState} />
       </div>
       <div className="col-span-6">
-        <div className="grid grid-cols-2 gap-y-2">
+        <div className="grid-2">
           <Controls state={state} setState={setState} />
         </div>
       </div>

@@ -8,21 +8,19 @@ export default () => {
     <Layout>
       <div className="bg-darkGray font-lulo leading-normal">
         <div className="container py-2">
-          <div className="mx-auto grid grid-cols-12 col-gap-4 row-gap-2 py-5">
+          <div className="mx-auto grid grid-cols-12 gap-y-3 gap-x-4 py-5">
             <div className="col-span-12 text-center">
-              <h1 className="text-xl text-orange uppercase leading-tight">
-                Sharepic Generator <br /> Frauenpolitischer Rat
+              <h1 className="text-lg text-white font-lulo font-bold uppercase leading-tight">
+                FPR • sharepics
               </h1>
             </div>
             {templates.map((template) => (
               <div className="col-span-12 sm:col-span-4 text-center">
-                <Link
-                  to={template.link}
-                  className="no-underline"
-                >
-                  <span className="block text-base text-white uppercase pb-1">
-                    {template.name}
-                  </span>
+                <Link to={template.link} className="no-underline">
+                  <span
+                    className="block text-base text-white uppercase pb-2"
+                    dangerouslySetInnerHTML={{ __html: template.name }}
+                  />
                   <img
                     src={template.thumbnailSrc}
                     alt={template.name}

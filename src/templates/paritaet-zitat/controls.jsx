@@ -18,8 +18,8 @@ export default ({ state, setState }) => {
           propertyPath="data.background.color"
         />
       </div>
-      <div className="col-span-2">
-        <label htmlFor="data.headline.content">Headline</label>
+      <div className="col-span-1">
+        <label htmlFor="data.headline.content">Dachzeile</label>
         <input
           id="data.headline.content"
           onChange={(e) =>
@@ -29,12 +29,12 @@ export default ({ state, setState }) => {
               e.target.value
             )
           }
-          rows={3}
+          rows={2}
           className="w-full"
           value={state.data.headline.content}
         />
       </div>
-      <div className="col-span-2">
+      <div className="col-span-1 col-start-1">
         <label htmlFor="data.body.content">Text</label>
         <textarea
           id="data.body.content"
@@ -50,14 +50,16 @@ export default ({ state, setState }) => {
         >
           {state.data.body.content}
         </textarea>
+      </div>
+      <div className="col-span-1">
         <TextScaleRange
           state={state}
           setState={setState}
           propertyPath="data.body.scale"
         />
       </div>
-      <div className="col-span-2">
-        <label htmlFor="data.author.content">Autor:in</label>
+      <div className="col-span-1">
+        <label htmlFor="data.author.content">Absender</label>
         <input
           id="data.author.content"
           onChange={(e) =>
@@ -71,21 +73,22 @@ export default ({ state, setState }) => {
           value={getProperty({ state, setState }, "data.author.content")}
         />
       </div>
-
-      <button
-        className="btn btn-download"
-        onClick={() =>
-          html2image(
-            {
-              state,
-              setState,
-            },
-            state.data.body.content
-          )
-        }
-      >
-        Download
-      </button>
+      <div className="col-span-1 col-start-1">
+        <button
+          className="btn btn-download"
+          onClick={() =>
+            html2image(
+              {
+                state,
+                setState,
+              },
+              state.data.body.content
+            )
+          }
+        >
+          Download
+        </button>
+      </div>
     </>
   );
 };

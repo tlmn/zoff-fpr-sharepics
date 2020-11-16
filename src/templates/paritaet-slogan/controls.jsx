@@ -18,7 +18,7 @@ export default ({ state, setState }) => {
           propertyPath="data.background.color"
         />
       </div>
-      <div className="col-span-2">
+      <div className="col-span-1">
         <label htmlFor="data.body.content">Text</label>
         <textarea
           id="data.body.content"
@@ -34,14 +34,16 @@ export default ({ state, setState }) => {
         >
           {state.data.body.content}
         </textarea>
+      </div>
+      <div className="col-span-1">
         <TextScaleRange
           state={state}
           setState={setState}
           propertyPath="data.body.scale"
         />
       </div>
-      <div className="col-span-2">
-        <label htmlFor="data.subline.content">Subline</label>
+      <div className="col-span-1">
+        <label htmlFor="data.subline.content">Text 2 &amp; Absender</label>
         <input
           id="data.subline.content"
           onChange={(e) =>
@@ -55,21 +57,22 @@ export default ({ state, setState }) => {
           value={getProperty({ state, setState }, "data.subline.content")}
         />
       </div>
-
-      <button
-        className="btn btn-download"
-        onClick={() =>
-          html2image(
-            {
-              state,
-              setState,
-            },
-            state.data.body.content
-          )
-        }
-      >
-        Download
-      </button>
+      <div className="col-span-1 col-start-1">
+        <button
+          className="btn btn-download"
+          onClick={() =>
+            html2image(
+              {
+                state,
+                setState,
+              },
+              state.data.body.content
+            )
+          }
+        >
+          Download
+        </button>
+      </div>
     </>
   );
 };

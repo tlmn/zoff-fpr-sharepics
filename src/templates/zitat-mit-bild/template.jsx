@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { getColor, updateProperty } from "../../lib/lib";
 
 import Draggable from "react-draggable";
+import LogoFPR from "../../assets/svg/logo-fpr";
 import Rectangle from "../../assets/svg/shape-rectangle";
 import TemplateLayout from "../../components/templateLayout";
 import logoBFWBlack from "../../assets/images/logo-BFW--black.png";
@@ -35,12 +36,13 @@ export default ({ state, setState }) => {
           backgroundImage: `url(${
             state.data.image.url !== null
               ? state.data.image.url
-              : "/assets/images/defaultImages/zitat-mit-bild.jpg"
+              : "/assets/images/defaultImages/zitat-mit-bild.png"
           })`,
           height: "100%",
           backgroundPositionX: `${state.data.image.position.x}px`,
           backgroundPositionY: `${state.data.image.position.y}px`,
           backgroundSize: `${state.data.image.scale * 10 + 100}%`,
+          filter: "grayscale(100%)"
         }}
       />
       <div
@@ -82,15 +84,24 @@ export default ({ state, setState }) => {
           />
         </div>
       </div>
-      {state.data.logo.show && (
+      {state.data.logo.type !== "none" && (
         <div className="absolute z-40 bottom-0 right-0">
-          <img
-            src={
-              state.data.logo.color === "black" ? logoBFWBlack : logoBFWWhite
-            }
-            style={{ width: "300px" }}
-            className="mr-3 mb-3"
-          />
+          {state.data.logo.type === "BFW" && (
+            <img
+              src={
+                state.data.logo.color === "black" ? logoBFWBlack : logoBFWWhite
+              }
+              style={{ width: "300px" }}
+              className="mr-4 mb-4"
+            />
+          )}
+          {state.data.logo.type === "FPR" && (
+            <LogoFPR
+              width={170}
+              className="mr-4 mb-4"
+              fillColor={state.data.logo.color}
+            />
+          )}
         </div>
       )}
     </TemplateLayout>

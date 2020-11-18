@@ -95,23 +95,26 @@ export default ({ state, setState }) => {
         )}
       </div>
       <div className="col-span-2">
-        <label htmlFor="data.logo.show" className="label--inline">
-          Logo anzeigen
+        <label htmlFor="data.logo.type" className="label--inline">
+          Logo auswählen
         </label>
-        <input
-          type="checkbox"
-          id="data.logo.show"
-          checked={state.data.logo.show}
-          onChange={() =>
+        <select
+          id="data.logo.type"
+          onChange={(e) =>
             updateProperty(
               { state, setState },
-              "data.logo.show",
-              !state.data.logo.show
+              "data.logo.type",
+              e.target.value
             )
           }
-        />
+          className="select-css"
+        >
+          <option value="FPR">FPR</option>
+          <option value="BFW">BFW</option>
+          <option value="none">keins</option>
+        </select>
       </div>
-      {state.data.logo.show && (
+      {state.data.logo.type !== "none" && (
         <div className="col-span-2">
           <label htmlFor="data.logo.color" className="label--inline">
             Logofarbe wählen

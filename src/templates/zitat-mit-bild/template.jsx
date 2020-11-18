@@ -42,7 +42,7 @@ export default ({ state, setState }) => {
           backgroundPositionX: `${state.data.image.position.x}px`,
           backgroundPositionY: `${state.data.image.position.y}px`,
           backgroundSize: `${state.data.image.scale * 10 + 100}%`,
-          filter: "grayscale(100%)"
+          filter: "grayscale(100%)",
         }}
       />
       <div
@@ -52,8 +52,11 @@ export default ({ state, setState }) => {
           mixBlendMode: "multiply",
         }}
       />
+
       {state.data.rectangle.show && (
-        <Rectangle className="absolute top-0 left-0 z-30 p-4" />
+        <div className="absolute top-0 left-0 z-30 w-full h-full p-4">
+          <Rectangle className="" width="100%" />
+        </div>
       )}
       <div className="absolute z-40 w-full h-full top-0 left-0 justify-center items-center flex">
         <div

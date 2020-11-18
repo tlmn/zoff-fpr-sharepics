@@ -11,17 +11,18 @@ export default () => {
       body: {
         content: ["Super\nheldinnen", "Am Limit"],
         scale: { value: 60, range: [40, 80] },
-        color: "white",
+        color: "black",
         availableColors: ["black", "white"],
       },
-      rectangle: { show: true },
+      rectangle: { show: false },
       logo: {
         show: true,
-        color: "white",
+        type: "FPR",
+        color: "black",
         availableColors: ["black", "white"],
       },
       overlay: {
-        color: "orange",
+        color: "green",
         availableColors: ["orange", "lightPurple", "green"],
       },
     },

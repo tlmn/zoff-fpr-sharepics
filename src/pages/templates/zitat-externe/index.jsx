@@ -22,7 +22,7 @@ export default () => {
       },
       background: {
         color: "lightGreen",
-        availableColors: ["lightGreen", "lightPurple"],
+        availableColors: ["lightGreen", "lightPurple", "orange"],
       },
     },
     ref: useRef(null),

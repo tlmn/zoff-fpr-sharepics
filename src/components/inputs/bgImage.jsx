@@ -46,7 +46,7 @@ export default ({ state, setState }) => {
         </button>
       </div>
       <div className="col-start-1 col-span-1">
-        <label id="imageScale" className="label--inline">
+        <label htmlFor="imageScale" className="label--inline">
           Zoom Bild
         </label>
       </div>

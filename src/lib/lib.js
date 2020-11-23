@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import { colors } from "../config/vars";
 import emojiRegex from "emoji-regex";
+import { saveAs } from "file-saver";
 import slugify from "react-slugify";
 import { toJpeg } from "html-to-image";
 
@@ -12,11 +13,8 @@ export const html2image = async ({ state, setState }, fileName = "fpr") => {
     quality: 1,
     width: 1080,
     height: 1080,
-  }).then(function (dataUrl) {
-    var link = document.createElement("a");
-    link.download = `sharepic-${slugify(fileName.substring(0, 20))}.jpg`;
-    link.href = dataUrl;
-    link.click();
+  }).then(function (blob) {
+    saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
     updateProperty({ state, setState }, "templateScale.isScaled", true);
   });
 };
@@ -40,9 +38,9 @@ export const getPrimaryColor = (currentState) => {
     .value;
 };
 
-export const updateProperty = ({ state, setState }, path, newValue) => {
+export const updateProperty = ({ state, setState }, propertyPath, newValue) => {
   let prevState = cloneDeepWith(state);
-  set(prevState, path, newValue);
+  set(prevState, propertyPath, newValue);
   setState(prevState);
 };
 

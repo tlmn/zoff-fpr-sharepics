@@ -11,7 +11,7 @@ export default ({ state, setState }) => {
       "data.templateScale.value",
       parentRef.current.scrollWidth / 1080
     );
-  }, [parentRef]);
+  }, []);
 
   return <div className="col-start-6 col-span-6" ref={parentRef} />;
 };

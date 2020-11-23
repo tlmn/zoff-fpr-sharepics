@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-onchange */
 import { getProperty, updateProperty } from "../../lib/lib";
 
 import React from "react";

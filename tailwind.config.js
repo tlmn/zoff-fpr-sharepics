@@ -39,6 +39,7 @@ module.exports = {
       auto: "auto",
       default: "default",
       pointer: "pointer",
+      move: "move",
     },
 
     screens: {

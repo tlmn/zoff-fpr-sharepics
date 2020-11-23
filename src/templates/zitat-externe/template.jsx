@@ -69,6 +69,7 @@ export default ({ state }) => (
             }
             className=""
             width={200}
+            alt="Logo"
           />
         )}
       </div>

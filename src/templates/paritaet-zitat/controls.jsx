@@ -1,17 +1,16 @@
-import { getProperty, html2image, updateProperty } from "../../lib/lib";
-
 import ColorSelector from "../../components/inputs/colorSelector";
+import Input from "../../components/inputs/input";
 import React from "react";
 import TextScaleRange from "../../components/inputs/textScaleRange";
+import Textarea from "../../components/inputs/textarea";
+import { html2image } from "../../lib/lib";
 
 export default ({ state, setState }) => {
   return (
     <>
       <div className="col-span-2">
-        <label htmlFor="data.background.color" className="label--inline">
-          Farbe wählen
-        </label>
         <ColorSelector
+          label="Farbe wählen"
           state={state}
           setState={setState}
           availableColors={state.data.background.availableColors}
@@ -19,37 +18,23 @@ export default ({ state, setState }) => {
         />
       </div>
       <div className="col-span-1">
-        <label htmlFor="data.headline.content">Dachzeile</label>
-        <input
-          id="data.headline.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.headline.content",
-              e.target.value
-            )
-          }
-          rows={2}
+        <Input
+          setState={setState}
+          state={state}
+          label="Dachzeile"
+          propertyPath="data.headline.content"
           className="w-full"
-          value={state.data.headline.content}
         />
       </div>
       <div className="col-span-1 col-start-1">
-        <label htmlFor="data.body.content">Text</label>
-        <textarea
-          id="data.body.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.body.content",
-              e.target.value
-            )
-          }
-          rows={3}
+        <Textarea
+          setState={setState}
+          state={state}
+          label="Text"
+          propertyPath="data.body.content"
           className="w-full"
-        >
-          {state.data.body.content}
-        </textarea>
+          rows={3}
+        />
       </div>
       <div className="col-span-1">
         <TextScaleRange
@@ -59,18 +44,12 @@ export default ({ state, setState }) => {
         />
       </div>
       <div className="col-span-1">
-        <label htmlFor="data.author.content">Absender</label>
-        <input
-          id="data.author.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.author.content",
-              e.target.value
-            )
-          }
+        <Input
+          setState={setState}
+          state={state}
+          label="Absender:in"
+          propertyPath="data.author.content"
           className="w-full"
-          value={getProperty({ state, setState }, "data.author.content")}
         />
       </div>
       <div className="col-span-1 col-start-1">

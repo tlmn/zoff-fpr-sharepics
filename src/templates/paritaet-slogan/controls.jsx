@@ -1,39 +1,31 @@
-import { getProperty, html2image, updateProperty } from "../../lib/lib";
-
 import ColorSelector from "../../components/inputs/colorSelector";
+import Input from "../../components/inputs/input";
 import React from "react";
 import TextScaleRange from "../../components/inputs/textScaleRange";
+import Textarea from "../../components/inputs/textarea";
+import { html2image } from "../../lib/lib";
 
 export default ({ state, setState }) => {
   return (
     <>
       <div className="col-span-2">
-        <label htmlFor="data.background.color" className="label--inline">
-          Farbe wählen
-        </label>
         <ColorSelector
           state={state}
+          label="Farbe wählen"
           setState={setState}
           availableColors={state.data.background.availableColors}
           propertyPath="data.background.color"
         />
       </div>
       <div className="col-span-1">
-        <label htmlFor="data.body.content">Text</label>
-        <textarea
-          id="data.body.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.body.content",
-              e.target.value
-            )
-          }
+        <Textarea
+          state={state}
+          setState={setState}
+          label="Text"
+          propertyPath="data.body.content"
           rows={3}
           className="w-full"
-        >
-          {state.data.body.content}
-        </textarea>
+        />
       </div>
       <div className="col-span-1">
         <TextScaleRange
@@ -43,18 +35,12 @@ export default ({ state, setState }) => {
         />
       </div>
       <div className="col-span-1">
-        <label htmlFor="data.subline.content">Text 2 &amp; Absender</label>
-        <input
-          id="data.subline.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.subline.content",
-              e.target.value
-            )
-          }
+        <Input
+          state={state}
+          setState={setState}
+          label="Text 2 &amp; Absender"
           className="w-full"
-          value={getProperty({ state, setState }, "data.subline.content")}
+          propertyPath="data.subline.content"
         />
       </div>
       <div className="col-span-1 col-start-1">

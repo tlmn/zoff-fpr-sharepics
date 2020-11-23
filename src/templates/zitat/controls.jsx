@@ -1,8 +1,10 @@
-import { getProperty, html2image, updateProperty } from "../../lib/lib";
-
+import Checkbox from "../../components/inputs/checkbox";
 import ColorSelector from "../../components/inputs/colorSelector";
+import Input from "../../components/inputs/input";
 import React from "react";
 import TextScaleRange from "../../components/inputs/textScaleRange";
+import Textarea from "../../components/inputs/textarea";
+import { html2image } from "../../lib/lib";
 
 export default ({ state, setState }) => {
   return (
@@ -18,22 +20,15 @@ export default ({ state, setState }) => {
           propertyPath="data.background.color"
         />
       </div>
-      <div className="col-span-1">
-        <label htmlFor="data.body.content">Text</label>
-        <textarea
-          id="data.body.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.body.content",
-              e.target.value
-            )
-          }
-          rows={3}
+      <div className="col-span-2">
+        <Textarea
+          state={state}
+          setState={setState}
+          propertyPath="data.body.content"
+          label="Text"
           className="w-full"
-        >
-          {state.data.body.content}
-        </textarea>
+          rows={3}
+        />
       </div>
       <div className="col-span-1">
         <TextScaleRange
@@ -42,35 +37,22 @@ export default ({ state, setState }) => {
           propertyPath="data.body.scale"
         />
       </div>
+
       <div className="col-span-1 col-start-1">
-        <label htmlFor="data.author.content">Autor:in</label>
-        <input
-          id="data.author.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.author.content",
-              e.target.value
-            )
-          }
-          value={getProperty({ state, setState }, "data.author.content")}
+        <Input
+          state={state}
+          setState={setState}
+          propertyPath="data.author.content"
+          label="Autor:in"
         />
       </div>
+      
       <div className="col-span-2">
-        <label htmlFor="data.logo.show" className="label--inline">
-          Logo anzeigen
-        </label>
-        <input
-          type="checkbox"
-          id="data.logo.show"
-          checked={state.data.logo.show}
-          onChange={() =>
-            updateProperty(
-              { state, setState },
-              "data.logo.show",
-              !state.data.logo.show
-            )
-          }
+        <Checkbox
+          propertyPath="data.logo.show"
+          state={state}
+          setState={setState}
+          label="Logo anzeigen"
         />
       </div>
 

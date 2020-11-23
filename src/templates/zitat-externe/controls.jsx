@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/no-onchange */
-import { getProperty, html2image, updateProperty } from "../../lib/lib";
+import { html2image, updateProperty } from "../../lib/lib";
 
 import ColorSelector from "../../components/inputs/colorSelector";
+import Input from "../../components/inputs/input";
 import React from "react";
 import TextScaleRange from "../../components/inputs/textScaleRange";
+import Textarea from "../../components/inputs/textarea";
 
 export default ({ state, setState }) => {
   return (
     <>
       <div className="col-span-2">
-        <label htmlFor="data.background.color" className="label--inline">
-          Farbe wählen
-        </label>
         <ColorSelector
+          label="Farbe wählen"
           state={state}
           setState={setState}
           availableColors={state.data.background.availableColors}
@@ -20,35 +20,22 @@ export default ({ state, setState }) => {
         />
       </div>
       <div className="col-span-2">
-        <label htmlFor="data.headline.content">Dachzeile</label>
-        <input
-          id="data.headline.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.headline.content",
-              e.target.value
-            )
-          }
-          value={getProperty({ state, setState }, "data.headline.content")}
+        <Input
+          state={state}
+          setState={setState}
+          label="Dachzeile"
+          propertyPath="data.headline.content"
         />
       </div>
       <div className="col-span-1">
-        <label htmlFor="data.body.content">Text</label>
-        <textarea
-          id="data.body.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.body.content",
-              e.target.value
-            )
-          }
+        <Textarea
+          state={state}
+          setState={setState}
+          label="Text"
+          propertyPath="data.body.content"
           rows={3}
           className="w-full"
-        >
-          {state.data.body.content}
-        </textarea>
+        />
       </div>
       <div className="col-span-1">
         <TextScaleRange
@@ -58,19 +45,14 @@ export default ({ state, setState }) => {
         />
       </div>
       <div className="col-span-1">
-        <label htmlFor="data.subline.content">Text 2 &amp; Absender</label>
-        <textarea
-          id="data.subline.content"
-          onChange={(e) =>
-            updateProperty(
-              { state, setState },
-              "data.subline.content",
-              e.target.value
-            )
-          }
-        >
-          {getProperty({ state, setState }, "data.subline.content")}
-        </textarea>
+        <Textarea
+          state={state}
+          setState={setState}
+          label="Text 2 &amp; Absender"
+          propertyPath="data.subline.content"
+          rows={3}
+          className="w-full"
+        />
       </div>
       <div className="col-span-2 col-start-1">
         <label htmlFor="data.logo.type" className="label--inline">

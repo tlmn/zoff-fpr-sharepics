@@ -1,11 +1,7 @@
 import DraggableBg from "../../components/inputs/draggableBg";
-import LogoFPR from "../../assets/svg/logo-fpr";
 import React from "react";
-import Rectangle from "../../assets/svg/shape-rectangle";
 import TemplateLayout from "../../components/templateLayout";
 import { getColor } from "../../lib/lib";
-import logoBFWBlack from "../../assets/images/logo-BFW--black.png";
-import logoBFWWhite from "../../assets/images/logo-BFW--white.png";
 
 export default ({ state, setState }) => (
   <>

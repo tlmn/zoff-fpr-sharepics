@@ -5,7 +5,6 @@ import React from "react";
 import TextScaleRange from "../../components/inputs/textScaleRange";
 import Textarea from "../../components/inputs/textarea";
 import { html2image } from "../../lib/lib";
-import { set } from "lodash";
 
 export default ({ state, setState }) => {
   return (

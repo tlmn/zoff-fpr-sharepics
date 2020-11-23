@@ -1,12 +1,8 @@
-/* eslint-disable jsx-a11y/no-onchange */
-import { html2image, updateProperty } from "../../lib/lib";
-
 import BgImage from "../../components/inputs/bgImage";
-import Checkbox from "../../components/inputs/checkbox";
 import ColorSelector from "../../components/inputs/colorSelector";
 import React from "react";
-import TextScaleRange from "../../components/inputs/textScaleRange";
-import Textarea from "../../components/inputs/textarea";
+/* eslint-disable jsx-a11y/no-onchange */
+import { html2image } from "../../lib/lib";
 
 export default ({ state, setState }) => {
   return (

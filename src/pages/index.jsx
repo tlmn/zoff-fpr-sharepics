@@ -6,7 +6,7 @@ import { templates } from "../config/vars";
 export default () => {
   return (
     <Layout>
-      <div className="bg-darkGray font-lulo leading-normal">
+      <div className="hidden md:block bg-darkGray font-lulo leading-normal">
         <div className="container py-2">
           <div className="mx-auto grid grid-cols-12 gap-y-3 gap-x-4 py-5">
             <div className="col-span-12 text-center">
@@ -31,6 +31,11 @@ export default () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="flex md:hidden justify-center items-center h-screen px-2">
+        <h1 className="font-merriweather text-white">
+          Bitte für den Sharepic-Generator einen Desktop-Rechner verwenden.
+        </h1>
       </div>
     </Layout>
   );

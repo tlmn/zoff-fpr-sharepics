@@ -3,6 +3,11 @@
   height: 1080px;
 }
 
+.template--thumbnail {
+  width: 600px;
+  height: 480px;
+}
+
 .template-scale {
   transform: scale(0.5) translate(-50%, -50%);
 }

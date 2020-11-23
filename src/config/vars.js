@@ -83,6 +83,12 @@ export const colors = [
     color: "#fff",
     secondaryColor: "#000",
   },
+  {
+    label: "transparent",
+    name: "transparent",
+    color: "transparent",
+    secondaryColor: "transparent",
+  },
 ];
 
 export const templates = [
@@ -110,5 +116,10 @@ export const templates = [
     name: "Parität,<br />Zitat",
     link: "templates/paritaet-zitat",
     thumbnailSrc: "../assets/images/templates/paritaet-zitat.jpg",
+  },
+  {
+    name: "Thumbnail<br />Bild",
+    link: "templates/bild-farbe",
+    thumbnailSrc: "../assets/images/templates/bild-farbe.jpg",
   },
 ];

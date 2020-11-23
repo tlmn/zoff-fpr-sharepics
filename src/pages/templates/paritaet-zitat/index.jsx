@@ -12,6 +12,7 @@ export default () => {
         content: "Frauen in der Politik – von Parität keine Spur",
         scale: { value: 100, range: [80, 120] },
       },
+      logo: { show: true },
       author: { content: "Euronews" },
       background: {
         color: "lightSalmon",

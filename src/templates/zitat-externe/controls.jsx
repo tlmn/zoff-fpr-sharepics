@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-onchange */
 import { getProperty, html2image, updateProperty } from "../../lib/lib";
 
 import ColorSelector from "../../components/inputs/colorSelector";

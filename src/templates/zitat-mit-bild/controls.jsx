@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-onchange */
 import { html2image, updateProperty } from "../../lib/lib";
 
 import BgImage from "../../components/inputs/bgImage";

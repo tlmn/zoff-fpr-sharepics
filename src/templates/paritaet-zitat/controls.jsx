@@ -1,9 +1,11 @@
+import Checkbox from "../../components/inputs/checkbox";
 import ColorSelector from "../../components/inputs/colorSelector";
 import Input from "../../components/inputs/input";
 import React from "react";
 import TextScaleRange from "../../components/inputs/textScaleRange";
 import Textarea from "../../components/inputs/textarea";
 import { html2image } from "../../lib/lib";
+import { set } from "lodash";
 
 export default ({ state, setState }) => {
   return (
@@ -50,6 +52,14 @@ export default ({ state, setState }) => {
           label="Absender:in"
           propertyPath="data.author.content"
           className="w-full"
+        />
+      </div>
+      <div className="col-span-2">
+        <Checkbox
+          state={state}
+          setState={setState}
+          propertyPath="data.logo.show"
+          label="Logo anzeigen"
         />
       </div>
       <div className="col-span-1 col-start-1">

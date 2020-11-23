@@ -1,4 +1,4 @@
-import { getColor, getProperty, getSecondaryColor } from "../../lib/lib";
+import { getColor, getSecondaryColor } from "../../lib/lib";
 
 import React from "react";
 import TemplateLayout from "../../components/templateLayout";

@@ -1,5 +1,7 @@
 import { getColor, getSecondaryColor } from "../../lib/lib";
 
+import BRGPartitaetBlack from "../../assets/svg/brg-paritaet-black";
+import BRGPartitaetWhite from "../../assets/svg/brg-paritaet-white";
 import React from "react";
 import TemplateLayout from "../../components/templateLayout";
 
@@ -44,6 +46,16 @@ export default ({ state }) => (
           __html: state.data.author.content.replace(/\n/gi, "<br/>"),
         }}
       />
+
+      {state.data.logo.show === true && (
+        <div className="absolute bottom-0 right-0 z-30 mr-4 mb-4">
+          {getSecondaryColor(state.data.background.color) === "#fff" ? (
+            <BRGPartitaetWhite width="464" />
+          ) : (
+            <BRGPartitaetBlack width="464" />
+          )}
+        </div>
+      )}
     </div>
   </TemplateLayout>
 );

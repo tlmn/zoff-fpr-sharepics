@@ -47,8 +47,8 @@ export default ({ state, setState }) => {
           <Textarea
             state={state}
             setState={setState}
-            propertyPath="data.body.content[0]"
-            label="Text 1 (nicht fett)"
+            propertyPath="data.body.content[1]"
+            label="Text 2 (nicht fett)"
             className="block w-full"
             rows={2}
           />

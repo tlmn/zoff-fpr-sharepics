@@ -7,12 +7,17 @@ import { saveAs } from "file-saver";
 import slugify from "react-slugify";
 import { toJpeg } from "html-to-image";
 
-export const html2image = async ({ state, setState }, fileName = "fpr") => {
+export const html2image = async (
+  { state, setState },
+  fileName = "fpr",
+  width = 1080,
+  height = 1080
+) => {
   updateProperty({ state, setState }, "templateScale.isScaled", false);
   toJpeg(state.ref.current, {
     quality: 1,
-    width: 1080,
-    height: 1080,
+    width: width,
+    height: height,
   }).then(function (blob) {
     saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
     updateProperty({ state, setState }, "templateScale.isScaled", true);

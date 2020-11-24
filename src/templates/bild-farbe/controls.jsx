@@ -28,7 +28,9 @@ export default ({ state, setState }) => {
               state,
               setState,
             },
-            state.data.body.content[0]
+            "thumbnail",
+            600,
+            480
           )
         }
       >

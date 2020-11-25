@@ -17,13 +17,16 @@ export default ({ state, setState }) => (
           backgroundImage: `url(${
             state.data.image.url !== null
               ? state.data.image.url
-              : "/assets/images/defaultImages/bild-farbe.jpg"
+              : "../../assets/images/defaultImages/bild-farbe.jpg"
           })`,
           height: "100%",
           backgroundPositionX: `${state.data.image.position.x}px`,
           backgroundPositionY: `${state.data.image.position.y}px`,
           backgroundSize: `${state.data.image.scale * 10 + 100}%`,
-          filter: "grayscale(100%)",
+          filter:
+            getColor(state.data.overlay.color) === "transparent"
+              ? ""
+              : "grayscale(100%)",
         }}
       />
       <div

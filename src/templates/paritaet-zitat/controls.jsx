@@ -1,27 +1,26 @@
+import React, { useContext } from "react";
+
 import Checkbox from "../../components/inputs/checkbox";
 import ColorSelector from "../../components/inputs/colorSelector";
 import Input from "../../components/inputs/input";
-import React from "react";
+import TemplateContext from "../../templateContext";
 import TextScaleRange from "../../components/inputs/textScaleRange";
 import Textarea from "../../components/inputs/textarea";
 import { html2image } from "../../lib/lib";
 
-export default ({ state, setState }) => {
+export default () => {
+  const [state, setState] = useContext(TemplateContext);
   return (
     <>
       <div className="col-span-2">
         <ColorSelector
           label="Farbe wählen"
-          state={state}
-          setState={setState}
           availableColors={state.data.background.availableColors}
           propertyPath="data.background.color"
         />
       </div>
       <div className="col-span-1">
         <Input
-          setState={setState}
-          state={state}
           label="Dachzeile"
           propertyPath="data.headline.content"
           className="w-full"
@@ -29,8 +28,6 @@ export default ({ state, setState }) => {
       </div>
       <div className="col-span-1 col-start-1">
         <Textarea
-          setState={setState}
-          state={state}
           label="Text"
           propertyPath="data.body.content"
           className="w-full"
@@ -38,16 +35,10 @@ export default ({ state, setState }) => {
         />
       </div>
       <div className="col-span-1">
-        <TextScaleRange
-          state={state}
-          setState={setState}
-          propertyPath="data.body.scale"
-        />
+        <TextScaleRange propertyPath="data.body.scale" />
       </div>
       <div className="col-span-1">
         <Input
-          setState={setState}
-          state={state}
           label="Absender:in"
           propertyPath="data.author.content"
           className="w-full"
@@ -55,8 +46,6 @@ export default ({ state, setState }) => {
       </div>
       <div className="col-span-2">
         <Checkbox
-          state={state}
-          setState={setState}
           propertyPath="data.logo.show"
           label="Logo anzeigen"
         />

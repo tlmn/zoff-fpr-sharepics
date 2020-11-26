@@ -1,12 +1,15 @@
+import React, { useContext } from "react";
+
 import Checkbox from "../../components/inputs/checkbox";
 import ColorSelector from "../../components/inputs/colorSelector";
 import Input from "../../components/inputs/input";
-import React from "react";
+import TemplateContext from "../../templateContext";
 import TextScaleRange from "../../components/inputs/textScaleRange";
 import Textarea from "../../components/inputs/textarea";
 import { html2image } from "../../lib/lib";
 
-export default ({ state, setState }) => {
+export default () => {
+  const [state, setState] = useContext(TemplateContext);
   return (
     <>
       <div className="col-span-2">
@@ -14,16 +17,12 @@ export default ({ state, setState }) => {
           Farbe wählen
         </label>
         <ColorSelector
-          state={state}
-          setState={setState}
           availableColors={state.data.background.availableColors}
           propertyPath="data.background.color"
         />
       </div>
       <div className="col-span-2">
         <Textarea
-          state={state}
-          setState={setState}
           propertyPath="data.body.content"
           label="Text"
           className="w-full"
@@ -31,29 +30,15 @@ export default ({ state, setState }) => {
         />
       </div>
       <div className="col-span-1">
-        <TextScaleRange
-          state={state}
-          setState={setState}
-          propertyPath="data.body.scale"
-        />
+        <TextScaleRange propertyPath="data.body.scale" />
       </div>
 
       <div className="col-span-1 col-start-1">
-        <Input
-          state={state}
-          setState={setState}
-          propertyPath="data.author.content"
-          label="Autor:in"
-        />
+        <Input propertyPath="data.author.content" label="Autor:in" />
       </div>
-      
+
       <div className="col-span-2">
-        <Checkbox
-          propertyPath="data.logo.show"
-          state={state}
-          setState={setState}
-          label="Logo anzeigen"
-        />
+        <Checkbox propertyPath="data.logo.show" label="Logo anzeigen" />
       </div>
 
       <button

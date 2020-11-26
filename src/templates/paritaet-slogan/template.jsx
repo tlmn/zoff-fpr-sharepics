@@ -1,10 +1,13 @@
+import React, { useContext } from "react";
 import { getColor, getSecondaryColor } from "../../lib/lib";
 
-import React from "react";
+import TemplateContext from "../../templateContext";
 import TemplateLayout from "../../components/templateLayout";
 
-export default ({ state }) => (
-  <TemplateLayout state={state}>
+export default () => {
+  const [state] = useContext(TemplateContext);
+  return(
+  <TemplateLayout>
     <div
       className="absolute top-0 left-0 w-full h-full z-10"
       style={{
@@ -36,4 +39,4 @@ export default ({ state }) => (
       />
     </div>
   </TemplateLayout>
-);
+)};

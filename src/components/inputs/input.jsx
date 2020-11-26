@@ -1,17 +1,21 @@
+import React, { useContext } from "react";
 import { getProperty, updateProperty } from "../../lib/lib";
 
-import React from "react";
+import TemplateContext from "../../templateContext";
 
-export default ({ state, setState, propertyPath, label }) => (
-  <>
-    <label htmlFor={propertyPath}>{label}</label>
-    <input
-      type="text"
-      value={getProperty({ state }, propertyPath)}
-      id={propertyPath}
-      onChange={(e) =>
-        updateProperty({ state, setState }, propertyPath, e.target.value)
-      }
-    />
-  </>
-);
+export default ({ propertyPath, label }) => {
+  const [state, setState] = useContext(TemplateContext);
+  return (
+    <>
+      <label htmlFor={propertyPath}>{label}</label>
+      <input
+        type="text"
+        value={getProperty({ state }, propertyPath)}
+        id={propertyPath}
+        onChange={(e) =>
+          updateProperty({ state, setState }, propertyPath, e.target.value)
+        }
+      />
+    </>
+  );
+};

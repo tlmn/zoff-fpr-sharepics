@@ -1,10 +1,14 @@
+import React, { useContext } from "react";
+
 import DraggableBg from "../../components/inputs/draggableBg";
-import React from "react";
+import TemplateContext from "../../templateContext";
 import TemplateLayout from "../../components/templateLayout";
 import { getColor } from "../../lib/lib";
 
-export default ({ state, setState }) => (
-  <>
+export default () => {
+  const [state, setState] = useContext(TemplateContext);
+
+  return (
     <TemplateLayout state={state} isThumbnail={true}>
       <DraggableBg
         state={state}
@@ -37,5 +41,5 @@ export default ({ state, setState }) => (
         }}
       />
     </TemplateLayout>
-  </>
-);
+  );
+};

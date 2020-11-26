@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Controls from "../../../templates/paritaet-slogan/controls";
 import Template from "../../../templates/paritaet-slogan/template";
+import TemplateContext from "../../../templateContext";
 import TemplateWrapper from "../../../components/templateWrapper";
 
 export default () => {
@@ -24,15 +25,17 @@ export default () => {
   });
 
   return (
-    <TemplateWrapper state={state} setState={setState}>
-      <div className="col-span-6">
-        <Template state={state} setState={setState} />
-      </div>
-      <div className="col-span-6">
-        <div className="grid-2">
-          <Controls state={state} setState={setState} />
+    <TemplateContext.Provider value={[state, setState]}>
+      <TemplateWrapper>
+        <div className="col-span-6">
+          <Template />
         </div>
-      </div>
-    </TemplateWrapper>
+        <div className="col-span-6">
+          <div className="grid-2">
+            <Controls />
+          </div>
+        </div>
+      </TemplateWrapper>
+    </TemplateContext.Provider>
   );
 };

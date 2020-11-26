@@ -1,10 +1,13 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 
 import IconReset from "../../assets/svg/icon-reset";
+import TemplateContext from "../../templateContext";
 import { updateProperty } from "../../lib/lib";
 
-export default ({ state, setState }) => {
+export default () => {
   const inputFileRef = useRef(null);
+  const [state, setState] = useContext(TemplateContext);
+
   return (
     <>
       <div className="col-span-2 flex items-center">

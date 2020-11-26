@@ -1,10 +1,14 @@
+import React, { useContext } from "react";
+
 import BgImage from "../../components/inputs/bgImage";
 import ColorSelector from "../../components/inputs/colorSelector";
-import React from "react";
+import TemplateContext from "../../templateContext";
 /* eslint-disable jsx-a11y/no-onchange */
 import { html2image } from "../../lib/lib";
 
-export default ({ state, setState }) => {
+export default () => {
+  const [state, setState] = useContext(TemplateContext);
+
   return (
     <>
       <div className="col-span-2">

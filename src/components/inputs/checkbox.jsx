@@ -1,23 +1,27 @@
+import React, { useContext } from "react";
 import { getProperty, updateProperty } from "../../lib/lib";
 
-import React from "react";
+import TemplateContext from "../../templateContext";
 
-export default ({ state, setState, propertyPath, label }) => (
-  <>
-    <label htmlFor={propertyPath} className="label--inline">
-      {label}
-    </label>
-    <input
-      type="checkbox"
-      checked={getProperty({ state }, propertyPath)}
-      id={propertyPath}
-      onChange={() =>
-        updateProperty(
-          { state, setState },
-          propertyPath,
-          !getProperty({ state }, propertyPath)
-        )
-      }
-    />
-  </>
-);
+export default ({ propertyPath, label }) => {
+  const [state, setState] = useContext(TemplateContext);
+  return (
+    <>
+      <label htmlFor={propertyPath} className="label--inline">
+        {label}
+      </label>
+      <input
+        type="checkbox"
+        checked={getProperty({ state }, propertyPath)}
+        id={propertyPath}
+        onChange={() =>
+          updateProperty(
+            { state, setState },
+            propertyPath,
+            !getProperty({ state }, propertyPath)
+          )
+        }
+      />
+    </>
+  );
+};

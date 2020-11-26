@@ -7,7 +7,7 @@ import TemplateContext from "../../templateContext";
 import TemplateLayout from "../../components/templateLayout";
 
 export default () => {
-  const [state, setState] = useContext(TemplateContext);
+  const [state] = useContext(TemplateContext);
   return (
     <TemplateLayout>
       <div

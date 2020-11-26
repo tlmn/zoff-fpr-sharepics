@@ -15,4 +15,3 @@ The generator is based on ReactJS and GatsbyJS and uses Tailwind CSS and custom 
 - failing download in Safari or mobile devices
 - improve usability on small screen devices
 - feature for downloading all slides of a template as ZIP file
-- use React context for providing `state` and `setState` across entire application and avoid props drilling

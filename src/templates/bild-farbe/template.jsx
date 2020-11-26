@@ -10,9 +10,7 @@ export default () => {
 
   return (
     <TemplateLayout isThumbnail={true}>
-      <DraggableBg
-        propertyPath="data.image.position"
-      />
+      <DraggableBg propertyPath="data.image.position" />
       <div
         className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
         style={{

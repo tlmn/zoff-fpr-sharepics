@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import ColorSelector from "../../components/inputs/colorSelector";
 import Input from "../../components/inputs/input";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../../components/templateContext";
 import TextScaleRange from "../../components/inputs/textScaleRange";
 import Textarea from "../../components/inputs/textarea";
 import { html2image } from "../../lib/lib";

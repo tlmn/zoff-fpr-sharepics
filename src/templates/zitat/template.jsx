@@ -3,7 +3,7 @@ import { getColor, getSecondaryColor } from "../../lib/lib";
 
 import LogoFPR from "../../assets/svg/logo-fpr";
 import QuotationMark from "../../assets/svg/icon-quotationMark";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
 
 export default () => {

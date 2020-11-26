@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 
 import IconReset from "../../assets/svg/icon-reset";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
 
 export default () => {

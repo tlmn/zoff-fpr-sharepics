@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import BgImage from "../../components/inputs/bgImage";
 import ColorSelector from "../../components/inputs/colorSelector";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../../components/templateContext";
 /* eslint-disable jsx-a11y/no-onchange */
 import { html2image } from "../../lib/lib";
 

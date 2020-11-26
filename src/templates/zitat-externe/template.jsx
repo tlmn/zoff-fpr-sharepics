@@ -4,7 +4,7 @@ import { getColor, getSecondaryColor } from "../../lib/lib";
 import LogoFPR from "../../assets/svg/logo-fpr";
 import LogoNbFBlack from "../../assets/images/logo-NbF--black.png";
 import LogoNbFWhite from "../../assets/images/logo-NbF--white.png";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
 
 export default () => {

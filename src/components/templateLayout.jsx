@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import TemplateContext from "../templateContext";
+import TemplateContext from "./templateContext";
 import { getProperty } from "../lib/lib";
 
 export default ({ children, isThumbnail = false }) => {

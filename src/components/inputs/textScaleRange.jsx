@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { getProperty, updateProperty } from "../../lib/lib";
 
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../templateContext";
 
 export default ({ propertyPath }) => {
   const [state, setState] = useContext(TemplateContext);

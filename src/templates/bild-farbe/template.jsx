@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import DraggableBg from "../../components/inputs/draggableBg";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
 import { getColor } from "../../lib/lib";
 

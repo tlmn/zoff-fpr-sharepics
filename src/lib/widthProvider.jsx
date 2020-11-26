@@ -1,6 +1,6 @@
 import React, { useContext, useLayoutEffect, useRef } from "react";
 
-import TemplateContext from "../templateContext";
+import TemplateContext from "../components/templateContext";
 import { updateProperty } from "./lib";
 
 export default () => {

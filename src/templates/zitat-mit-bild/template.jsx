@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import DraggableBg from "../../components/inputs/draggableBg";
 import LogoFPR from "../../assets/svg/logo-fpr";
 import Rectangle from "../../assets/svg/shape-rectangle";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
 import { getColor } from "../../lib/lib";
 import logoBFWBlack from "../../assets/images/logo-BFW--black.png";

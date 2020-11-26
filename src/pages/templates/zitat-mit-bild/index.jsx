@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Controls from "../../../templates/zitat-mit-bild/controls";
 import Template from "../../../templates/zitat-mit-bild/template";
-import TemplateContext from "../../../templateContext";
+import TemplateContext from "../../../components/templateContext";
 import TemplateWrapper from "../../../components/templateWrapper";
 
 export default () => {

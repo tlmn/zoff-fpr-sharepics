@@ -3,7 +3,7 @@ import { getColor, getSecondaryColor } from "../../lib/lib";
 
 import BRGPartitaetBlack from "../../assets/svg/brg-paritaet-black";
 import BRGPartitaetWhite from "../../assets/svg/brg-paritaet-white";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
 
 export default () => {

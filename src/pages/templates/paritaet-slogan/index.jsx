@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Controls from "../../../templates/paritaet-slogan/controls";
 import Template from "../../../templates/paritaet-slogan/template";
-import TemplateContext from "../../../templateContext";
+import TemplateContext from "../../../components/templateContext";
 import TemplateWrapper from "../../../components/templateWrapper";
 
 export default () => {

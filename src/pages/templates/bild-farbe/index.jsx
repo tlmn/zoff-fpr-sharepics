@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Controls from "../../../templates/bild-farbe/controls";
 import Template from "../../../templates/bild-farbe/template";
-import TemplateContext from "../../../templateContext";
+import TemplateContext from "../../../components/templateContext";
 import TemplateWrapper from "../../../components/templateWrapper";
 
 export default () => {

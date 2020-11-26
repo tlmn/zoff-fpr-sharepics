@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { getColor, getSecondaryColor } from "../../lib/lib";
 
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
 
 export default () => {

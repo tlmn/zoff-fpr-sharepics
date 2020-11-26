@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 
 import Draggable from "react-draggable";
-import TemplateContext from "../../templateContext";
+import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
 
 export default ({ propertyPath }) => {

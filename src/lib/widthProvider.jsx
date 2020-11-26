@@ -1,9 +1,11 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useContext, useLayoutEffect, useRef } from "react";
 
+import TemplateContext from "../templateContext";
 import { updateProperty } from "./lib";
 
-export default ({ state, setState }) => {
+export default () => {
   const parentRef = useRef(null);
+  const [state, setState] = useContext(TemplateContext);
 
   useLayoutEffect(() => {
     updateProperty(

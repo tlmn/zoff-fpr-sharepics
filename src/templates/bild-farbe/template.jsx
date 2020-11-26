@@ -6,13 +6,11 @@ import TemplateLayout from "../../components/templateLayout";
 import { getColor } from "../../lib/lib";
 
 export default () => {
-  const [state, setState] = useContext(TemplateContext);
+  const [state] = useContext(TemplateContext);
 
   return (
-    <TemplateLayout state={state} isThumbnail={true}>
+    <TemplateLayout isThumbnail={true}>
       <DraggableBg
-        state={state}
-        setState={setState}
         propertyPath="data.image.position"
       />
       <div

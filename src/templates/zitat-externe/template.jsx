@@ -10,7 +10,7 @@ import TemplateLayout from "../../components/templateLayout";
 export default () => {
   const [state] = useContext(TemplateContext);
   return (
-    <TemplateLayout state={state}>
+    <TemplateLayout>
       <div
         className="absolute top-0 left-0 w-full h-full z-10"
         style={{

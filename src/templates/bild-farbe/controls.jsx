@@ -12,12 +12,11 @@ export default () => {
   return (
     <>
       <div className="col-span-2">
-        <BgImage state={state} setState={setState} currentSlide={0} />
+        <BgImage  currentSlide={0} />
       </div>
+      
       <div className="col-span-2">
         <ColorSelector
-          state={state}
-          setState={setState}
           availableColors={state.data.overlay.availableColors}
           propertyPath="data.overlay.color"
           label="Farbe wählen"

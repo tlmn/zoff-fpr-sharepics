@@ -122,4 +122,9 @@ export const templates = [
     link: "templates/bild-farbe",
     thumbnailSrc: "../assets/images/templates/bild-farbe.jpg",
   },
+  {
+    name: "Textkachel",
+    link: "templates/text",
+    thumbnailSrc: "../assets/images/templates/text.png",
+  },
 ];

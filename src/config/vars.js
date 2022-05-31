@@ -127,4 +127,9 @@ export const templates = [
     link: "templates/text",
     thumbnailSrc: "../assets/images/templates/text.png",
   },
+  {
+    name: "FPR Bild",
+    link: "templates/bild-logo",
+    thumbnailSrc: "../assets/images/templates/bild-logo.png",
+  },
 ];

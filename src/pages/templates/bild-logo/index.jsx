@@ -10,21 +10,11 @@ export default () => {
     data: {
       image: { url: null, position: { x: 0, y: 0 }, scale: 0 },
       body: {
-        content: ["Super\nheldinnen", "Am Limit"],
+        content: "",
         scale: { value: 60, range: [40, 80] },
-        color: "black",
-        availableColors: ["black", "white"],
       },
-      rectangle: { show: false },
       logo: {
-        show: true,
-        type: "FPR",
-        color: "black",
-        availableColors: ["black", "white"],
-      },
-      overlay: {
-        color: "green",
-        availableColors: ["orange", "lightPurple", "green"],
+        label: "fprBlack"
       },
     },
     ref: useRef(null),

@@ -48,7 +48,7 @@ export default () => {
           <IconReset height="20" className="block" />
         </button>
       </div>
-      <div className="col-start-1 col-span-1">
+      <div className="col-start-1 col-span-1 mt-3">
         <label htmlFor="imageScale" className="label--inline">
           Zoom Bild
         </label>

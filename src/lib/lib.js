@@ -1,7 +1,7 @@
 import { cloneDeepWith, get, set } from "lodash";
 import { useEffect, useState } from "react";
 
-import { colors } from "../config/vars";
+import { colors, logosAndColors } from "../config/vars";
 import emojiRegex from "emoji-regex";
 import { saveAs } from "file-saver";
 import slugify from "react-slugify";
@@ -41,6 +41,17 @@ export const getSecondaryColor = (color) => {
 export const getPrimaryColor = (currentState) => {
   return colors.filter((color) => color.name === currentState.primaryColor)[0]
     .value;
+};
+
+export const getColorFromLogoColor = (label) => {
+  return logosAndColors.filter((obj) => obj.label === label)[0]
+    .color;
+};
+
+export const getLogoFromLogoColor = (label) => {
+  //debugger
+  return logosAndColors.filter((obj) => obj.label === label)[0]
+    .logo;
 };
 
 export const updateProperty = ({ state, setState }, propertyPath, newValue) => {

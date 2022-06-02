@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 
 import DraggableBg from "../../components/inputs/draggableBg";
 import LogoFPR from "../../assets/svg/logo-fpr";
-import Rectangle from "../../assets/svg/shape-rectangle";
+import LogoBFW from "../../assets/svg/logo-bfw";
+import LogoPari from "../../assets/svg/pari-multi";
+
 import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
-import { getColor } from "../../lib/lib";
-import logoBFWBlack from "../../assets/images/logo-BFW--black.png";
-import logoBFWWhite from "../../assets/images/logo-BFW--white.png";
+import { getColorFromLogoColor, getLogoFromLogoColor } from "../../lib/lib";
 
 export default () => {
   const [state] = useContext(TemplateContext);
@@ -21,7 +21,7 @@ export default () => {
             backgroundImage: `url(${
               state.data.image.url !== null
                 ? state.data.image.url
-                : "/assets/images/defaultImages/zitat-mit-bild.png"
+                : "/assets/images/defaultImages/bild-logo.jpg"
             })`,
             height: "100%",
             backgroundPositionX: `${state.data.image.position.x}px`,
@@ -30,25 +30,27 @@ export default () => {
           }}
         />
 
-        {state.data.logo.type !== "none" && (
+        {state.data.logo.label !== "none" && (
           <div className="absolute z-40 bottom-0 right-0">
-            {state.data.logo.type === "BFW" && (
-              <img
-                src={
-                  state.data.logo.color === "black"
-                    ? logoBFWBlack
-                    : logoBFWWhite
-                }
-                style={{ width: "300px" }}
-                className="mr-4 mb-4"
-                alt="Logo"
+            {getLogoFromLogoColor(state.data.logo.label) === "BFW" && (
+              <LogoBFW
+                width={330}
+                className="mr-4 mb-3"
+                fillColor={getColorFromLogoColor(state.data.logo.label)}
               />
             )}
-            {state.data.logo.type === "FPR" && (
+            {getLogoFromLogoColor(state.data.logo.label) === "FPR" && (
               <LogoFPR
                 width={170}
+                className="mr-4 mb-3"
+                fillColor={getColorFromLogoColor(state.data.logo.label)}
+              />
+            )}
+            {getLogoFromLogoColor(state.data.logo.label) === "Pari" && (
+              <LogoPari
+                width={400}
                 className="mr-4 mb-4"
-                fillColor={state.data.logo.color}
+                fillColor={getColorFromLogoColor(state.data.logo.label)}
               />
             )}
           </div>

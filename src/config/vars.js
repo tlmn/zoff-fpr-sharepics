@@ -1,3 +1,99 @@
+export const logosAndColors = [
+  {
+    label: "fprWhite",
+    name: "FPR weiß",
+    color: "#FFFFFF",
+    logo: "FPR"
+  },
+  {
+    label: "fprPurple",
+    name: "FPR lila",
+    color: "#484E9C",
+    logo: "FPR"
+  },
+  {
+    label: "fprGreen",
+    name: "FPR grün",
+    color: "#B8D89E",
+    logo: "FPR"
+  },
+  {
+    label: "fprOrange",
+    name: "FPR orange",
+    color: "#FF3700",
+    logo: "FPR"
+  },
+  {
+    label: "fprGrey",
+    name: "FPR grau",
+    color: "#C4C4C4",
+    logo: "FPR"
+  },
+  {
+    label: "fprBlack",
+    name: "FPR schwarz",
+    color: "#000000",
+    logo: "FPR"
+  },
+  {
+    label: "bfwWhite",
+    name: "BFW weiß",
+    color: "#FFFFFF",
+    logo: "BFW"
+  },
+  {
+    label: "bfwPurple",
+    name: "BFW lila",
+    color: "#484E9C",
+    logo: "BFW"
+  },
+  {
+    label: "bfwGreen",
+    name: "BFW grün",
+    color: "#B8D89E",
+    logo: "BFW"
+  },
+  {
+    label: "bfwOrange",
+    name: "BFW orange",
+    color: "#FF3700",
+    logo: "BFW"
+  },
+  {
+    label: "bfwGrey",
+    name: "BFW grau",
+    color: "#C4C4C4",
+    logo: "BFW"
+  },
+  {
+    label: "bfwBlack",
+    name: "BFW schwarz",
+    color: "#000000",
+    logo: "BFW"
+  },
+  {
+    label: "pariPetrol",
+    name: "Pari Petrol",
+    color: "#118472",
+    logo: "Pari"
+  },
+  {
+    label: "pariPink",
+    name: "Pari Rosa",
+    color: "#FFDBC6",
+    logo: "Pari"
+  },
+  {
+    label: "pariLightPurple",
+    name: "Pari Helllila",
+    color: "#D2D2EB",
+    logo: "Pari"
+  },
+];
+
+
+
+
 export const colors = [
   {
     label: "lightGreen",

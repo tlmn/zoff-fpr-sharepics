@@ -30,7 +30,7 @@ export default () => {
       </div>
       <div className="col-span-1 my-3">
         <Textarea
-          propertyPath="data.body.content"
+          propertyPath="data.subline.content"
           label="Zusatz"
           className="w-full"
           rows={3}

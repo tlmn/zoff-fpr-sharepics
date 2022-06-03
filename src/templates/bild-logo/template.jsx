@@ -4,8 +4,6 @@ import DraggableBg from "../../components/inputs/draggableBg";
 import LogoFPR from "../../assets/svg/logo-fpr";
 import LogoBFW from "../../assets/svg/logo-bfw";
 import LogoPari from "../../assets/svg/pari-multi";
-//import LogoPariBlack from "../../assets/svg/brg-paritaet-black";
-//import LogoPariWhite from "../../assets/svg/brg-paritaet-white";
 
 import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";

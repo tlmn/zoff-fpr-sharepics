@@ -53,8 +53,16 @@ export const getColorFromLogoColor = (label) => {
 };
 
 export const getLogoFromLogoColor = (label) => {
+  if (label === 'none') return '';
   return logosAndColors.filter((obj) => obj.label === label)[0]
     .logo;
+};
+
+export const isLogoFprOrNone = (label) => {
+  if (label === 'none') return true;
+  return logosAndColors
+    .filter((obj) => obj.label === label)
+    .filter((obj) => obj.logo === 'FPR').length == 1 ? true : false;
 };
 
 export const setBgColorAsColor = (highlight, color) => {

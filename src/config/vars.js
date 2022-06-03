@@ -72,23 +72,17 @@ export const logosAndColors = [
     logo: "BFW"
   },
   {
-    label: "pariPetrol",
-    name: "Pari Petrol",
-    color: "#118472",
+    label: "pariWhite",
+    name: "Pari weiß",
+    color: "#FFFFFF",
     logo: "Pari"
   },
   {
-    label: "pariPink",
-    name: "Pari Rosa",
-    color: "#FFDBC6",
+    label: "pariBlack",
+    name: "Pari schwarz",
+    color: "#000000",
     logo: "Pari"
-  },
-  {
-    label: "pariLightPurple",
-    name: "Pari Helllila",
-    color: "#D2D2EB",
-    logo: "Pari"
-  },
+  }
 ];
 
 export const colorsUpdated = [

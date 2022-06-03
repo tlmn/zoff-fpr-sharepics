@@ -62,7 +62,7 @@ export default () => {
         )}
       </div>
       <div className="col-span-2">
-        <label htmlFor="data.logo.type" className="label--inline">
+        <label htmlFor="data.logo.type" className="label--inline">w
           Logo auswählen
         </label>
         <select

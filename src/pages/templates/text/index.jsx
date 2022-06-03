@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 
+import { colorsUpdated } from "../../../config/vars";
 import Controls from "../../../templates/text/controls";
 import Template from "../../../templates/text/template";
 import TemplateContext from "../../../components/templateContext";
@@ -10,27 +11,21 @@ export default () => {
     data: {
       body: {
         content:
-          "In einer feministischen Utopie kennen Menschenrechte keine Grenzen",
-        scale: { value: 60, range: [50, 70] },
-      },
-      author: {
-        content: "Heiderose Gerber",
+        "Frauen sind die {Superheldinnen des Alltags}: Super Mutter, super Arbeits-kraft, super gesund, super jung und schön, super Freundin oder Ehefrau – super gestresst! Die Superheldinnen sind am Limit.",
+        scale: { value: 30, range: [20, 80] },
       },
       background: {
-        color: "lightGreen",
-        availableColors: [
-          "lightGreen",
-          "green",
-          "orange",
-          "lightPurple",
-          "darkPurple",
-          "black",
-          "gray",
-        ],
+        color: "purple",
+        availableColors: colorsUpdated.map(x => x.label),
       },
-      logo: {
-        show: true,
+      text: {
+        color: "white",
+        availableColors: ["black", "white"]
       },
+      highlight: {
+        active: "underline",
+        availableHighlights: ["underline", "background"]
+      }
     },
     ref: useRef(null),
     templateScale: { isScaled: true, value: 0 },

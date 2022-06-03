@@ -13,7 +13,7 @@ export default ({ propertyPath }) => {
         id={propertyPath}
         min={getProperty({ state }, `${propertyPath}.range[0]`)}
         max={getProperty({ state }, `${propertyPath}.range[1]`)}
-        defaultValue={getProperty({ state }, propertyPath)}
+        defaultValue={getProperty({ state }, `${propertyPath}.value` )}
         className="w-full"
         onChange={(e) =>
           updateProperty(

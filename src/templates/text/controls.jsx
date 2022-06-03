@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
 
-import Checkbox from "../../components/inputs/checkbox";
-import ColorSelector from "../../components/inputs/colorSelector";
-import Input from "../../components/inputs/input";
+import ColorsUpdatedSelector from "../../components/inputs/colorsUpdatedSelector";
 import TemplateContext from "../../components/templateContext";
 import TextScaleRange from "../../components/inputs/textScaleRange";
 import Textarea from "../../components/inputs/textarea";
-import { html2image } from "../../lib/lib";
+import { html2image, updateProperty } from "../../lib/lib";
 
 export default () => {
   const [state, setState] = useContext(TemplateContext);
@@ -16,17 +14,17 @@ export default () => {
         <label htmlFor="data.background.color" className="label--inline">
           Farbe wählen
         </label>
-        <ColorSelector
+        <ColorsUpdatedSelector
           availableColors={state.data.background.availableColors}
           propertyPath="data.background.color"
         />
       </div>
-      <div className="col-span-2">
+      <div className="col-span-2 my-3">
         <Textarea
           propertyPath="data.body.content"
-          label="Text"
+          label="Text ({Hervorhebung})"
           className="w-full"
-          rows={3}
+          rows={10}
         />
       </div>
       <div className="col-span-1">
@@ -34,11 +32,45 @@ export default () => {
       </div>
 
       <div className="col-span-1">
-        <div>Textfarbe</div>
+        <label htmlFor="data.logo.type" className="label--inline">
+          Textfarbe
+        </label>
+
+        <select
+          id="data.text.color"
+          onChange={(e) =>
+            updateProperty(
+              { state, setState },
+              "data.text.color",
+              e.target.value
+            )
+          }
+          className="select-css"
+        >
+          <option value="white">Weiß</option>
+          <option value="black">Schwarz</option>
+        </select>
       </div>
 
-      <div className="col-span-2">
-        <div>Hervorhebung</div>
+      <div className="col-span-2 my-3">
+        <label htmlFor="data.highlight.active" className="label--inline">
+          Highlight
+        </label>
+
+        <select
+          id="data.highlight.active"
+          onChange={(e) =>
+            updateProperty(
+              { state, setState },
+              "data.highlight.active",
+              e.target.value
+            )
+          }
+          className="select-css"
+        >
+          <option value="underline">Unterstreichen</option>
+          <option value="background">Markieren</option>
+        </select>
       </div>
 
       <button

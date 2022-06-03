@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
-import { getColor, getSecondaryColor } from "../../lib/lib";
+import { getUpdatedColor, setBgColorAsColor } from "../../lib/lib";
 
-import LogoFPR from "../../assets/svg/logo-fpr";
-import QuotationMark from "../../assets/svg/icon-quotationMark";
 import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
 
@@ -14,7 +12,7 @@ export default () => {
       <div
         className="absolute top-0 left-0 w-full h-full z-10"
         style={{
-          backgroundColor: getColor(state.data.background.color),
+          backgroundColor: getUpdatedColor(state.data.background.color),
         }}
       />
 
@@ -23,15 +21,15 @@ export default () => {
         style={{ paddingTop: "10px" }}
       >
         <div
-          className="leading-normal uppercase font-bold font-lulo mt-2 break-words"
+          className="font-bold font-lulofont-lulo mt-2 break-words"
           style={{
             fontSize: `${state.data.body.scale.value}px`,
-            color: getSecondaryColor(state.data.background.color),
+            color: state.data.text.color,
           }}
           dangerouslySetInnerHTML={{
             __html: state.data.body.content
               .replace(/\n/gi, "<br/>")
-              .replace(/{/gi, "<span class='underline'>")
+              .replace(/{/gi, `<span class='${state.data.highlight.active} ${state.data.text.color}' ${setBgColorAsColor(state.data.highlight.active, getUpdatedColor(state.data.background.color))}>`)
               .replace(/}/gi, "</span>"),
           }}
         />

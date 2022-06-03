@@ -91,6 +91,53 @@ export const logosAndColors = [
   },
 ];
 
+export const colorsUpdated = [
+  {
+    label: "white",
+    name: "weiß",
+    color: "#FFFFFF"
+  },
+  {
+    label: "purple",
+    name: "lila",
+    color: "#484E9C"
+  },
+  {
+    label: "green",
+    name: "grün",
+    color: "#B8D89E"
+  },
+  {
+    label: "orange",
+    name: "orange",
+    color: "#FF3700"
+  },
+  {
+    label: "grey",
+    name: "grau",
+    color: "#C4C4C4"
+  },
+  {
+    label: "black",
+    name: "schwarz",
+    color: "#000000"
+  },
+  {
+    label: "petrol",
+    name: "petrol",
+    color: "#118472"
+  },
+  {
+    label: "pink",
+    name: "rosa",
+    color: "#FFDBC6"
+  },
+  {
+    label: "lightpurple",
+    name: "helllila",
+    color: "#D2D2EB"
+  }
+];
 
 
 

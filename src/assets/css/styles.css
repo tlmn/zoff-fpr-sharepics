@@ -20,3 +20,14 @@
   @apply gap-y-2;
   @apply gap-x-2;
 }
+
+.background {
+  padding: 0 .3em;
+}
+
+.background.white {
+  background-color: white;
+}
+.background.black {
+  background-color: black;
+}

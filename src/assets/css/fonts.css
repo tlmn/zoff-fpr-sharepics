@@ -25,6 +25,12 @@
 
 @font-face {
   font-family: "AvenirNextLTPro";
+  font-weight: 400;
+  src: url(/assets/fonts/avenirNext/avenirNextMedium.woff);
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
   font-weight: 500;
   font-style: italic;
   src: url(/assets/fonts/avenirNext/avenirNextMediumItalic.woff);

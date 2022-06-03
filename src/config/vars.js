@@ -255,6 +255,11 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/paritaet-zitat.jpg",
   },
   {
+    name: "FPR Text + Portrait",
+    link: "templates/text-portrait",
+    thumbnailSrc: "../assets/images/templates/text-portrait.jpg",
+  },
+  {
     name: "FPR Bild",
     link: "templates/bild-logo",
     thumbnailSrc: "../assets/images/templates/bild-logo.jpg",

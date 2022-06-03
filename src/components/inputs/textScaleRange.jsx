@@ -3,11 +3,11 @@ import { getProperty, updateProperty } from "../../lib/lib";
 
 import TemplateContext from "../templateContext";
 
-export default ({ propertyPath }) => {
+export default ({ propertyPath, optLabel }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>
-      <label htmlFor={propertyPath}>Textgröße</label>
+      <label htmlFor={propertyPath}>Textgröße {optLabel}</label>
       <input
         type="range"
         id={propertyPath}

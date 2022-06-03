@@ -261,9 +261,14 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/paritaet-zitat.jpg",
   },
   {
-    name: "Thumbnail<br />Bild",
-    link: "templates/bild-farbe",
-    thumbnailSrc: "../assets/images/templates/bild-farbe.jpg",
+    name: "FPR Bild",
+    link: "templates/bild-logo",
+    thumbnailSrc: "../assets/images/templates/bild-logo.jpg",
+  },
+  {
+    name: "Textkachel Logo + Info",
+    link: "templates/text-logo",
+    thumbnailSrc: "../assets/images/templates/text-logo.jpg",
   },
   {
     name: "Textkachel",
@@ -271,8 +276,8 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/text.png",
   },
   {
-    name: "FPR Bild",
-    link: "templates/bild-logo",
-    thumbnailSrc: "../assets/images/templates/bild-logo.png",
+    name: "Thumbnail<br />Bild",
+    link: "templates/bild-farbe",
+    thumbnailSrc: "../assets/images/templates/bild-farbe.jpg",
   },
 ];

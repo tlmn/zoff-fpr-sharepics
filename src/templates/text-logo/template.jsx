@@ -31,7 +31,7 @@ export default () => {
           className="font-normal font-avenir mt-2 break-words"
           style={{
             fontSize: `${state.data.body.scale.value}px`,
-            color: getUpdatedSecondaryColor(state.data.background.color),
+            color: getUpdatedColor(state.data.text.color),
           }}
           dangerouslySetInnerHTML={{
             __html: state.data.body.content
@@ -51,7 +51,7 @@ export default () => {
             className="font-normal font-avenir mt-2 break-words"
             style={{
               fontSize: `30px`,
-              color: state.data.text.color,
+              color: getUpdatedColor(state.data.text.color),
             }}
             dangerouslySetInnerHTML={{
               __html: state.data.subline.content,
@@ -65,22 +65,21 @@ export default () => {
               <LogoBFW
                 width={330}
                 className="mr-4 mb-3"
-                fillColor={getUpdatedSecondaryColor(state.data.background.color)}
+                fillColor={getUpdatedColor(state.data.text.color)}
               />
             )}
             {state.data.logo.type === "FPR" && (
               <LogoFPR
                 width={170}
                 className="mr-4 mb-3"
-                fillColor={getUpdatedSecondaryColor(state.data.background.color)}
+                fillColor={getUpdatedColor(state.data.text.color)}
               />
             )}
             {state.data.logo.type === "Pari" && (
-
               <LogoPari
                 width={390}
                 className="mr-4 mb-4"
-                fillColor={getUpdatedSecondaryColor(state.data.background.color)}
+                fillColor={getUpdatedColor(state.data.text.color)}
               />
             )}
           </div>

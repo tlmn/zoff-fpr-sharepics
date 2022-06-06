@@ -24,10 +24,13 @@
 .background {
   padding: 0.1em 0.25em;
 }
-
 .background.white {
   background-color: white;
 }
 .background.black {
   background-color: black;
+}
+
+.background.purple {
+  background-color: #484E9C;
 }

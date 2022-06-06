@@ -12,12 +12,12 @@ export default () => {
   return (
     <>
       <div className="col-span-2">
-        <label htmlFor="data.background.color" className="label--inline">
-          Farbe wählen
-        </label>
         <ColorsUpdatedSelector
           availableColors={state.data.background.availableColors}
           propertyPath="data.background.color"
+          availableColorsPath="data.text.availableColors"
+          textColorPath="data.text.color"
+          label="Farbe wählen"
         />
       </div>
       <div className="col-span-1 my-3">
@@ -56,8 +56,10 @@ export default () => {
           }
           className="select-css"
         >
-          <option value="white">Weiß</option>
-          <option value="black">Schwarz</option>
+          {state.data.text.availableColors.map(
+            (item) =>
+            <option value={item.label}>{item.name}</option>
+          )}
         </select>
       </div>
 

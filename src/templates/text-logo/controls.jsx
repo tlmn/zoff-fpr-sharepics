@@ -4,7 +4,6 @@ import ColorsUpdatedSelector from "../../components/inputs/colorsUpdatedSelector
 import TemplateContext from "../../components/templateContext";
 import TextScaleRange from "../../components/inputs/textScaleRange";
 import Textarea from "../../components/inputs/textarea";
-import LogoAndColorSelector from "../../components/inputs/logoColorSelector";
 import { html2image, updateProperty } from "../../lib/lib";
 
 export default () => {

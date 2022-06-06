@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 /* eslint-disable jsx-a11y/no-onchange */
-import { getProperty, updateProperty, updateMultipleProperties } from "../../lib/lib";
+import { getProperty, updateMultipleProperties } from "../../lib/lib";
 import { getAvailableSecondaryColors } from "../../lib/lib";
 
 
@@ -16,7 +16,6 @@ export default ({ propertyPath, availableColors = [], label = "", availableColor
       </label>
       <select
         onChange={(e) =>
-          //updateProperty({ state, setState }, propertyPath, e.target.value);
           updateMultipleProperties({ state, setState },
                                    [propertyPath, availableColorsPath, textColorPath],
                                    [e.target.value,

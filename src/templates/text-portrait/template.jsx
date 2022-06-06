@@ -53,7 +53,7 @@ export default () => {
           className="font-normal font-avenir mt-2 break-words"
           style={{
             fontSize: `${state.data.body.scale.value}px`,
-            color: state.data.text.color,
+            color: getUpdatedColor(state.data.text.color),
           }}
           dangerouslySetInnerHTML={{
             __html: state.data.body.content
@@ -71,7 +71,7 @@ export default () => {
             className="font-normal font-avenir mt-2 break-words"
             style={{
               fontSize: `${state.data.subline.scale.value}px`,
-              color: state.data.text.color,
+              color: getUpdatedColor(state.data.text.color),
             }}
             dangerouslySetInnerHTML={{
               __html: state.data.subline.content

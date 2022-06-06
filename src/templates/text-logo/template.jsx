@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { getUpdatedColor, getUpdatedSecondaryColor, setBgColorAsColor } from "../../lib/lib";
+import { getUpdatedColor, setBgColorAsColor } from "../../lib/lib";
 
 import LogoFPR from "../../assets/svg/logo-fpr";
 import LogoBFW from "../../assets/svg/logo-bfw";
@@ -8,7 +8,7 @@ import LogoPari from "../../assets/svg/pari-multi";
 import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
 
-import { getColorFromLogoColor, getLogoFromLogoColor, isLogoFprOrNone } from "../../lib/lib";
+import { isLogoFprOrNone } from "../../lib/lib";
 
 
 export default () => {

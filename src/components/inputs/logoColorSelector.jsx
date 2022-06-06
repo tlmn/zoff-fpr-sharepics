@@ -5,7 +5,7 @@ import { getProperty, updateProperty } from "../../lib/lib";
 import TemplateContext from "../templateContext";
 import { logosAndColors } from "../../config/vars";
 
-export default ({ propertyPath, label = ""}) => {
+export default ({ propertyPath, label = "", filterByBGColor = ""}) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>
@@ -20,7 +20,13 @@ export default ({ propertyPath, label = ""}) => {
         id={propertyPath}
         className="select-css"
       >
-        {logosAndColors.map(
+        {logosAndColors.filter(x => {
+          if (filterByBGColor === "true") {
+            return [state.data.background.color, "black", "white"].map(y => x.label.toLowerCase().includes(y)).some((elem) => !!elem );
+          } else {
+            return x;
+          }
+        }).map(
           (item) =>
           <option value={item.label}>{item.name}</option>
         )}

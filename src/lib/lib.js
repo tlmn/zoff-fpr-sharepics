@@ -85,10 +85,8 @@ export const updateProperty = ({ state, setState }, propertyPath, newValue) => {
 
 export const updateMultipleProperties = ({ state, setState }, propteriesArray, newValuesArray) => {
   let prevState = cloneDeepWith(state);
-
   propteriesArray.forEach((v, k) => {
     set(prevState, v, newValuesArray[k]);
-    //debugger
   });
   setState(prevState);
 };

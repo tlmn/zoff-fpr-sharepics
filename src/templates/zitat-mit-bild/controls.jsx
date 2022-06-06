@@ -62,7 +62,7 @@ export default () => {
         )}
       </div>
       <div className="col-span-2">
-        <label htmlFor="data.logo.type" className="label--inline">w
+        <label htmlFor="data.logo.type" className="label--inline">
           Logo auswählen
         </label>
         <select
@@ -78,6 +78,7 @@ export default () => {
         >
           <option value="FPR">FPR</option>
           <option value="BFW">BFW</option>
+          <option value="Pfeil">Pfeil</option>
           <option value="none">keins</option>
         </select>
       </div>

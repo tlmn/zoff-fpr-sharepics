@@ -27,10 +27,13 @@ export default ({ propertyPath, availableColors = [], label = "", availableColor
         className="select-css"
       >
         {colorsUpdated.map(
-          (color) =>
-            availableColors.flat().includes(color.label) && (
+          (color) => {
+//            debugger
+
+            return availableColors.flat().includes(color.label) && (
               <option value={color.label}>{color.name}</option>
             )
+          }
         )}
       </select>
     </>

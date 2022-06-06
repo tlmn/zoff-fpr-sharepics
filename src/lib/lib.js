@@ -46,6 +46,11 @@ export const getAvailableSecondaryColors = (color) => {
   return colorsUpdated.filter((c) => c.label === color)[0].secondaryColor;
 };
 
+export const getColorsByLogo = (logo) => {
+  //debugger
+  return logosAndColors.filter((l) => l.logo === logo).map(x => x.label);
+};
+
 export const getSecondaryColor = (color) => {
   return colors.filter((c) => c.label === color)[0].secondaryColor;
 };

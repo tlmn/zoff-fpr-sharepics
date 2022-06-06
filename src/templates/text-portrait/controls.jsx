@@ -75,8 +75,7 @@ export default () => {
       <div className="col-span-1  mt-3">
         <LogoAndColorSelector
           propertyPath="data.logo.label"
-          label="Log
-o wählen"
+          label="Logo wählen"
           filterByBGColor="true"
         />
       </div>

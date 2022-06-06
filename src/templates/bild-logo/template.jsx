@@ -4,6 +4,7 @@ import DraggableBg from "../../components/inputs/draggableBg";
 import LogoFPR from "../../assets/svg/logo-fpr";
 import LogoBFW from "../../assets/svg/logo-bfw";
 import LogoPari from "../../assets/svg/pari-multi";
+import LogoArrow from "../../assets/svg/arrow";
 
 import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
@@ -47,14 +48,19 @@ export default () => {
               />
             )}
             {getLogoFromLogoColor(state.data.logo.label) === "Pari" && (
-
               <LogoPari
                   width={390}
                 className="mr-4 mb-4"
                 fillColor={getColorFromLogoColor(state.data.logo.label)}
                 />
+            )}
 
-
+            {getLogoFromLogoColor(state.data.logo.label) === "Pfeil" && (
+              <LogoArrow
+                width={170}
+                className="mr-4 mb-4"
+                fillColor={getColorFromLogoColor(state.data.logo.label)}
+              />
             )}
           </div>
         )}

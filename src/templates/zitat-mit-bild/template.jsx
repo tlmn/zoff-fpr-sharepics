@@ -2,12 +2,11 @@ import React, { useContext } from "react";
 
 import DraggableBg from "../../components/inputs/draggableBg";
 import LogoFPR from "../../assets/svg/logo-fpr";
-import Rectangle from "../../assets/svg/shape-rectangle";
 import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
-import { getColor } from "../../lib/lib";
-import logoBFWBlack from "../../assets/images/logo-BFW--black.png";
-import logoBFWWhite from "../../assets/images/logo-BFW--white.png";
+import { getColor, getUpdatedColor } from "../../lib/lib";
+import LogoBFW from "../../assets/svg/logo-bfw";
+import LogoArrow from "../../assets/svg/arrow";
 
 export default () => {
   const [state] = useContext(TemplateContext);
@@ -21,7 +20,7 @@ export default () => {
             backgroundImage: `url(${
               state.data.image.url !== null
                 ? state.data.image.url
-                : "/assets/images/defaultImages/zitat-mit-bild.png"
+                : "/assets/images/defaultImages/bild-logo.jpg"
             })`,
             height: "100%",
             backgroundPositionX: `${state.data.image.position.x}px`,
@@ -38,11 +37,6 @@ export default () => {
           }}
         />
 
-        {state.data.rectangle.show && (
-          <div className="absolute top-0 left-0 z-30 w-full h-full p-4">
-            <Rectangle className="" width="100%" />
-          </div>
-        )}
         <div className="absolute z-40 w-full h-full top-0 left-0 justify-center items-center flex">
           <div
             className="text-center leading-tight"
@@ -75,19 +69,21 @@ export default () => {
         {state.data.logo.type !== "none" && (
           <div className="absolute z-40 bottom-0 right-0">
             {state.data.logo.type === "BFW" && (
-              <img
-                src={
-                  state.data.logo.color === "black"
-                    ? logoBFWBlack
-                    : logoBFWWhite
-                }
-                style={{ width: "300px" }}
-                className="mr-4 mb-4"
-                alt="Logo"
+              <LogoBFW
+                width={330}
+                className="mr-4 mb-3"
+                fillColor={getUpdatedColor(state.data.logo.color)}
               />
             )}
             {state.data.logo.type === "FPR" && (
               <LogoFPR
+                width={170}
+                className="mr-4 mb-4"
+                fillColor={state.data.logo.color}
+              />
+            )}
+            {state.data.logo.type === "Pfeil" && (
+              <LogoArrow
                 width={170}
                 className="mr-4 mb-4"
                 fillColor={state.data.logo.color}

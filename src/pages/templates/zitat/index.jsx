@@ -19,17 +19,18 @@ export default () => {
       background: {
         color: "lightGreen",
         availableColors: [
-          "lightGreen",
           "green",
           "orange",
           "lightPurple",
-          "darkPurple",
           "black",
-          "gray",
+          "fprGrey",
         ],
       },
       logo: {
         show: true,
+        type: "FPR",
+        color: "black",
+        availableColors: ["black", "white"],
       },
     },
     ref: useRef(null),

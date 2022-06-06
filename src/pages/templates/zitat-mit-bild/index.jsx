@@ -24,7 +24,7 @@ export default () => {
       },
       overlay: {
         color: "green",
-        availableColors: ["orange", "lightPurple", "green"],
+        availableColors: ["orange", "lightPurple", "green", "fprGrey"],
       },
     },
     ref: useRef(null),

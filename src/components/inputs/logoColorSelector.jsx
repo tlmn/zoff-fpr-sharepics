@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { getProperty, updateProperty } from "../../lib/lib";
 
 import TemplateContext from "../templateContext";
-import { logosAndColors } from "../../config/vars";
+import { logosAndColors, colorsUpdated } from "../../config/vars";
 
 export default ({ propertyPath, label = "", filterByBGColor = ""}) => {
   const [state, setState] = useContext(TemplateContext);

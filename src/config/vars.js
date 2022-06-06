@@ -94,6 +94,48 @@ export const logosAndColors = [
     name: "Pari schwarz",
     color: "#000000",
     logo: "Pari"
+  },
+  {
+    label: "arrowWhite",
+    name: "Pfeil weiß",
+    color: "#FFFFFF",
+    logo: "Pfeil",
+    secondaryColor: "#000000",
+  },
+  {
+    label: "arrowPurple",
+    name: "Pfeil lila",
+    color: "#484E9C",
+    logo: "Pfeil",
+    secondaryColor: "#FFFFFF",
+  },
+  {
+    label: "arrowGreen",
+    name: "Pfeil grün",
+    color: "#B8D89E",
+    logo: "Pfeil",
+    secondaryColor: "#000000",
+  },
+  {
+    label: "arrowOrange",
+    name: "Pfeil orange",
+    color: "#FF3700",
+    logo: "Pfeil",
+    secondaryColor: "#000000",
+  },
+  {
+    label: "arrowGrey",
+    name: "Pfeil grau",
+    color: "#C4C4C4",
+    logo: "Pfeil",
+    secondaryColor: "#000000",
+  },
+  {
+    label: "arrowBlack",
+    name: "Pfeil schwarz",
+    color: "#000000",
+    logo: "Pfeil",
+    secondaryColor: "#FFFFFF",
   }
 ];
 
@@ -275,6 +317,12 @@ export const colors = [
     secondaryColor: "#fff",
   },
   {
+    label: "fprGrey",
+    name: "grau",
+    color: "#C4C4C4",
+    secondaryColor: "#000000",
+  },
+  {
     label: "gradient",
     name: "Verlauf",
     color: "linear-gradient(90deg, #368B7D 0%, #EBBA9D 60%)",
@@ -287,15 +335,21 @@ export const colors = [
     secondaryColor: "#000",
   },
   {
-    label: "lightSalmon",
-    name: "lachshell",
-    color: "#ffe2d1",
-    secondaryColor: "#000",
+    label: "pariPink",
+    name: "lachs",
+    color: "#FFDBC6",
+    secondaryColor: "#000"
   },
   {
-    label: "salmon",
-    name: "lachs",
-    color: "#ffcaaa",
+    label: "pariPurple",
+    name: "flieder",
+    color: "#D2D2EB",
+    secondaryColor: "#000"
+  },
+  {
+    label: "pariPetrol",
+    name: "petrol",
+    color: "#118472",
     secondaryColor: "#000",
   },
   {

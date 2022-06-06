@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
-import { getColor, getSecondaryColor } from "../../lib/lib";
+import { getColor, getUpdatedColor, getSecondaryColor } from "../../lib/lib";
 
 import LogoFPR from "../../assets/svg/logo-fpr";
+import LogoBFW from "../../assets/svg/logo-bfw";
+import LogoArrow from "../../assets/svg/arrow";
+import LogoPari from "../../assets/svg/pari-multi";
+
 import QuotationMark from "../../assets/svg/icon-quotationMark";
 import TemplateContext from "../../components/templateContext";
 import TemplateLayout from "../../components/templateLayout";
@@ -46,13 +50,39 @@ export default () => {
         />
       </div>
 
-      {state.data.logo.show && (
-        <LogoFPR
-          width={196}
-          fillColor={getSecondaryColor(state.data.background.color)}
-          className="absolute z-40 right-0 bottom-0 mr-4 mb-4"
-        />
-      )}
+        {state.data.logo.type !== "none" && (
+          <div className="absolute z-40 bottom-0 right-0">
+            {state.data.logo.type === "BFW" && (
+              <LogoBFW
+                width={330}
+                className="mr-4 mb-3"
+                fillColor={getSecondaryColor(state.data.background.color)}
+              />
+            )}
+            {state.data.logo.type === "FPR" && (
+              <LogoFPR
+                width={170}
+                className="mr-4 mb-3"
+                fillColor={getSecondaryColor(state.data.background.color)}
+              />
+            )}
+            {state.data.logo.type === "Pari" && (
+              <LogoPari
+                width={390}
+                className="mr-4 mb-4"
+                fillColor={getSecondaryColor(state.data.background.color)}
+              />
+            )}
+
+            {state.data.logo.type === "Pfeil" && (
+              <LogoArrow
+                width={170}
+                className="mr-4 mb-4"
+                fillColor={getSecondaryColor(state.data.background.color)}
+              />
+            )}
+          </div>
+        )}
     </TemplateLayout>
   );
 };

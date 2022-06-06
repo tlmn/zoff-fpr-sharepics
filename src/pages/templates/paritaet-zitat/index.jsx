@@ -16,13 +16,11 @@ export default () => {
       logo: { show: true },
       author: { content: "Euronews" },
       background: {
-        color: "lightSalmon",
+        color: "pariPink",
         availableColors: [
-          "lightSalmon",
-          "darkGreen",
-          "turquoise",
-          "salmon",
-          "grayGreen",
+          "pariPink",
+          "pariPetrol",
+          "pariPurple",
         ],
       },
     },

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { updateProperty } from "../../lib/lib";
 
 import Checkbox from "../../components/inputs/checkbox";
 import ColorSelector from "../../components/inputs/colorSelector";
@@ -38,7 +39,26 @@ export default () => {
       </div>
 
       <div className="col-span-2">
-        <Checkbox propertyPath="data.logo.show" label="Logo anzeigen" />
+        <label htmlFor="data.logo.type" className="label--inline">
+          Logo auswählen
+        </label>
+        <select
+          id="data.logo.type"
+          onChange={(e) =>
+            updateProperty(
+              { state, setState },
+              "data.logo.type",
+              e.target.value
+            )
+          }
+          className="select-css"
+        >
+          <option value="FPR">FPR</option>
+          <option value="BFW">BFW</option>
+          <option value="Pari">Pari</option>
+          <option value="Pfeil">Pfeil</option>
+          <option value="none">keins</option>
+        </select>
       </div>
 
       <button

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { getColor, getUpdatedColor, getSecondaryColor } from "../../lib/lib";
+import { getColor, getSecondaryColor } from "../../lib/lib";
 
 import LogoFPR from "../../assets/svg/logo-fpr";
 import LogoBFW from "../../assets/svg/logo-bfw";

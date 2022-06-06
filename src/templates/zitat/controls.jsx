@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
-import { updateProperty } from "../../lib/lib";
+/* eslint-disable jsx-a11y/no-onchange */
+import { updateProperty, html2image } from "../../lib/lib";
 
-import Checkbox from "../../components/inputs/checkbox";
 import ColorSelector from "../../components/inputs/colorSelector";
 import Input from "../../components/inputs/input";
 import TemplateContext from "../../components/templateContext";
 import TextScaleRange from "../../components/inputs/textScaleRange";
 import Textarea from "../../components/inputs/textarea";
-import { html2image } from "../../lib/lib";
 
 export default () => {
   const [state, setState] = useContext(TemplateContext);

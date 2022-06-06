@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+/* eslint-disable jsx-a11y/no-onchange */
 import ColorsUpdatedSelector from "../../components/inputs/colorsUpdatedSelector";
 import TemplateContext from "../../components/templateContext";
 import TextScaleRange from "../../components/inputs/textScaleRange";

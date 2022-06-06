@@ -13,7 +13,7 @@ export default () => {
       body: {
         content:
         "Frauen sind die Superheldinnen des Alltags: Super Mutter, super Arbeits-kraft, super gesund, super jung und schön, super Freundin oder Ehefrau – super gestresst! Die Superheldinnen sind am Limit.",
-        scale: { value: 50, range: [30, 80] },
+        scale: { value: 50, range: [44, 80] },
       },
       subline: {
         content: "Hier steht ein Zusatz",

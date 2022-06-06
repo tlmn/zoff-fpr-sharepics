@@ -41,7 +41,7 @@ export default () => {
       </div>
 
       <div className="col-span-1">
-        <label htmlFor="data.logo.type" className="label--inline">
+        <label htmlFor="data.text.color" className="label--inline">
           Textfarbe
         </label>
 
@@ -62,12 +62,26 @@ export default () => {
       </div>
 
       <div className="col-span-2  mt-3">
-        <LogoAndColorSelector
-          propertyPath="data.logo.label"
-          label="Logo wählen"
-        />
-      </div>
+        <label htmlFor="data.logo.type" className="label--inline">
+          Logo
+        </label>
 
+        <select
+          id="data.logo.type"
+          onChange={(e) =>
+            updateProperty(
+              { state, setState },
+              "data.logo.type",
+              e.target.value
+            )
+          }
+          className="select-css"
+        >
+          <option value="FPR">FPR</option>
+          <option value="BFW">BFW</option>
+          <option value="Pari">Pari</option>
+        </select>
+      </div>
 
       <div className="col-span-2 my-3">
         <label htmlFor="data.highlight.active" className="label--inline">

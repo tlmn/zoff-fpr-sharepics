@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 
 import { colorsUpdated } from "../../../config/vars";
+import { getAvailableSecondaryColors } from "../../../lib/lib";
 import Controls from "../../../templates/text/controls";
 import Template from "../../../templates/text/template";
 import TemplateContext from "../../../components/templateContext";
@@ -19,8 +20,8 @@ export default () => {
         availableColors: colorsUpdated.map(x => x.label),
       },
       text: {
-        color: "white",
-        availableColors: ["black", "white"]
+        color: getAvailableSecondaryColors("purple")[0].label,
+        availableColors: getAvailableSecondaryColors("purple")
       },
       highlight: {
         active: "underline",

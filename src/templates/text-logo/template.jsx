@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { getUpdatedColor, setBgColorAsColor } from "../../lib/lib";
+import { getUpdatedColor, getUpdatedSecondaryColor, setBgColorAsColor } from "../../lib/lib";
 
 import LogoFPR from "../../assets/svg/logo-fpr";
 import LogoBFW from "../../assets/svg/logo-bfw";
@@ -23,14 +23,15 @@ export default () => {
       />
 
       <div
-        className="absolute z-20 w-full h-full top-0 left-0 flex flex-col p-3"
-        style={{ paddingTop: `${ state.data.subline.content === '' ? 200 : 10}px` }}
+        className="absolute z-20 w-full h-full top-0 left-0 flex flex-col p-3 overflow-hidden"
+        style={{ paddingTop: `${ state.data.subline.content === '' ? 200 : 10}px`,
+                 height: `${ state.data.subline.content === '' ? '43em' : 'auto'}`}}
       >
         <div
           className="font-normal font-avenir mt-2 break-words"
           style={{
             fontSize: `${state.data.body.scale.value}px`,
-            color: state.data.text.color,
+            color: getUpdatedSecondaryColor(state.data.background.color),
           }}
           dangerouslySetInnerHTML={{
             __html: state.data.body.content
@@ -44,7 +45,7 @@ export default () => {
         <div
           className="absolute z-30 bottom-0 left-0 flex flex-col p-3"
           style={{ paddingTop: "10px",
-                   width: `${isLogoFprOrNone(state.data.logo.label) ? 75 : 60 }%`}}
+                   width: `${isLogoFprOrNone(state.data.logo.label) ? 75 : 55 }%`}}
         >
           <div
             className="font-normal font-avenir mt-2 break-words"
@@ -60,26 +61,26 @@ export default () => {
 
         {state.data.logo.label !== "none" && (
           <div className="absolute z-40 bottom-0 right-0">
-            {getLogoFromLogoColor(state.data.logo.label) === "BFW" && (
+            {state.data.logo.type === "BFW" && (
               <LogoBFW
                 width={330}
                 className="mr-4 mb-3"
-                fillColor={getColorFromLogoColor(state.data.logo.label)}
+                fillColor={getUpdatedSecondaryColor(state.data.background.color)}
               />
             )}
-            {getLogoFromLogoColor(state.data.logo.label) === "FPR" && (
+            {state.data.logo.type === "FPR" && (
               <LogoFPR
                 width={170}
                 className="mr-4 mb-3"
-                fillColor={getColorFromLogoColor(state.data.logo.label)}
+                fillColor={getUpdatedSecondaryColor(state.data.background.color)}
               />
             )}
-            {getLogoFromLogoColor(state.data.logo.label) === "Pari" && (
+            {state.data.logo.type === "Pari" && (
 
               <LogoPari
                 width={390}
                 className="mr-4 mb-4"
-                fillColor={getColorFromLogoColor(state.data.logo.label)}
+                fillColor={getUpdatedSecondaryColor(state.data.background.color)}
               />
             )}
           </div>

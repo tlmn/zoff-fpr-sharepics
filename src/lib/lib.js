@@ -38,6 +38,14 @@ export const getUpdatedColor = (color) => {
   return colorsUpdated.filter((c) => c.label === color)[0].color;
 };
 
+export const getUpdatedSecondaryColor = (color) => {
+  return colorsUpdated.filter((c) => c.label === color)[0].secondaryColor;
+};
+
+export const getAvailableSecondaryColors = (color) => {
+  return colorsUpdated.filter((c) => c.label === color)[0].secondaryColor;
+};
+
 export const getSecondaryColor = (color) => {
   return colors.filter((c) => c.label === color)[0].secondaryColor;
 };
@@ -72,6 +80,16 @@ export const setBgColorAsColor = (highlight, color) => {
 export const updateProperty = ({ state, setState }, propertyPath, newValue) => {
   let prevState = cloneDeepWith(state);
   set(prevState, propertyPath, newValue);
+  setState(prevState);
+};
+
+export const updateMultipleProperties = ({ state, setState }, propteriesArray, newValuesArray) => {
+  let prevState = cloneDeepWith(state);
+
+  propteriesArray.forEach((v, k) => {
+    set(prevState, v, newValuesArray[k]);
+    //debugger
+  });
   setState(prevState);
 };
 

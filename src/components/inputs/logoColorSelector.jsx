@@ -5,7 +5,7 @@ import { getProperty, updateProperty } from "../../lib/lib";
 import TemplateContext from "../templateContext";
 import { logosAndColors } from "../../config/vars";
 
-export default ({ propertyPath, label = "" }) => {
+export default ({ propertyPath, label = ""}) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>

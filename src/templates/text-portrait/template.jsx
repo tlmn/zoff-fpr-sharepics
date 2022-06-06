@@ -35,13 +35,10 @@ export default () => {
         }}
       />
       <div
-        className="absolute top-0 w-full h-full z-20"
-        style={{
-          left: `-29%`
-        }}
+        className="absolute top-0 left-0 w-full h-full z-20"
       >
         <DiagonalOverlay
-          width={999}
+          width={982}
           className="mr-4 mb-4"
           fillColor={getUpdatedColor(state.data.background.color)}
         />
@@ -59,7 +56,8 @@ export default () => {
             color: state.data.text.color,
           }}
           dangerouslySetInnerHTML={{
-            __html: state.data.body.content,
+            __html: state.data.body.content
+              .replace(/\n/gi, "<br/>"),
           }}
         />
         </div>
@@ -76,7 +74,8 @@ export default () => {
               color: state.data.text.color,
             }}
             dangerouslySetInnerHTML={{
-              __html: state.data.subline.content,
+              __html: state.data.subline.content
+                .replace(/\n/gi, "<br/>"),
             }}
           />
           </div>

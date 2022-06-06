@@ -3,73 +3,85 @@ export const logosAndColors = [
     label: "fprWhite",
     name: "FPR weiß",
     color: "#FFFFFF",
-    logo: "FPR"
+    logo: "FPR",
+    secondaryColor: "#000000",
   },
   {
     label: "fprPurple",
     name: "FPR lila",
     color: "#484E9C",
-    logo: "FPR"
+    logo: "FPR",
+    secondaryColor: "#FFFFFF",
   },
   {
     label: "fprGreen",
     name: "FPR grün",
     color: "#B8D89E",
-    logo: "FPR"
+    logo: "FPR",
+    secondaryColor: "#000000",
   },
   {
     label: "fprOrange",
     name: "FPR orange",
     color: "#FF3700",
-    logo: "FPR"
+    logo: "FPR",
+    secondaryColor: "#000000",
   },
   {
     label: "fprGrey",
     name: "FPR grau",
     color: "#C4C4C4",
-    logo: "FPR"
+    logo: "FPR",
+    secondaryColor: "#000000",
   },
   {
     label: "fprBlack",
     name: "FPR schwarz",
     color: "#000000",
-    logo: "FPR"
+    logo: "FPR",
+    secondaryColor: "#FFFFFF",
   },
   {
     label: "bfwWhite",
     name: "BFW weiß",
     color: "#FFFFFF",
-    logo: "BFW"
+    logo: "BFW",
+    secondaryColor: "#000000",
   },
   {
     label: "bfwPurple",
     name: "BFW lila",
     color: "#484E9C",
-    logo: "BFW"
+    logo: "BFW",
+    secondaryColor: "#FFFFFF",
   },
   {
     label: "bfwGreen",
     name: "BFW grün",
     color: "#B8D89E",
-    logo: "BFW"
+    logo: "BFW",
+    secondaryColor: "#000000",
   },
   {
     label: "bfwOrange",
     name: "BFW orange",
     color: "#FF3700",
-    logo: "BFW"
+    logo: "BFW",
+    secondaryColor: "#000000",
   },
   {
     label: "bfwGrey",
     name: "BFW grau",
     color: "#C4C4C4",
-    logo: "BFW"
+    logo: "BFW",
+    secondaryColor: "#000000",
   },
   {
     label: "bfwBlack",
     name: "BFW schwarz",
     color: "#000000",
-    logo: "BFW"
+    logo: "BFW",
+    secondaryColor: "#FFFFFF",
   },
   {
     label: "pariWhite",
@@ -87,49 +99,127 @@ export const logosAndColors = [
 
 export const colorsUpdated = [
   {
-    label: "white",
-    name: "weiß",
-    color: "#FFFFFF"
-  },
-  {
     label: "purple",
-    name: "lila",
-    color: "#484E9C"
+    name: "FPR lila",
+    color: "#484E9C",
+    secondaryColor: [
+      {
+        name: "weiß",
+        label: "white",
+        color: "#FFFFFF",
+      }
+    ]
   },
   {
     label: "green",
-    name: "grün",
-    color: "#B8D89E"
+    name: "FPR grün",
+    color: "#B8D89E",
+    secondaryColor: [
+      {
+        name: "schwarz",
+        label: "black",
+        color: "#000",
+      }
+    ]
   },
   {
     label: "orange",
-    name: "orange",
-    color: "#FF3700"
+    name: "FPR orange",
+    color: "#FF3700",
+    secondaryColor: [
+      {
+        name: "schwarz",
+        label: "black",
+        color: "#000",
+      },
+      {
+        name: "weiß",
+        label: "white",
+        color: "#FFFFFF",
+      }
+    ]
   },
   {
     label: "grey",
-    name: "grau",
-    color: "#C4C4C4"
+    name: "FPR grau",
+    color: "#C4C4C4",
+    secondaryColor: [
+      {
+        name: "schwarz",
+        label: "black",
+        color: "#000",
+      }
+    ]
+  },
+  {
+    label: "white",
+    name: "FPR weiß",
+    color: "#FFFFFF",
+    secondaryColor: [
+      {
+        name: "schwarz",
+        label: "black",
+        color: "#000",
+      },
+      {
+        name: "lila",
+        label: "purple",
+        color: "#484E9C",
+      },
+    ]
   },
   {
     label: "black",
-    name: "schwarz",
-    color: "#000000"
+    name: "FPR schwarz",
+    color: "#000000",
+    secondaryColor: [
+      {
+        name: "weiß",
+        label: "white",
+        color: "#FFFFFF",
+      }
+    ]
   },
   {
     label: "petrol",
-    name: "petrol",
-    color: "#118472"
+    name: "Pari petrol",
+    color: "#118472",
+    secondaryColor: [
+      {
+        name: "schwarz",
+        label: "black",
+        color: "#000",
+      },
+      {
+        name: "weiß",
+        label: "white",
+        color: "#FFFFFF",
+      }
+    ]
   },
   {
     label: "pink",
-    name: "rosa",
-    color: "#FFDBC6"
+    name: "Pari lachs",
+    color: "#FFDBC6",
+    secondaryColor: [
+      {
+        name: "schwarz",
+        label: "black",
+        color: "#000",
+      }
+    ]
   },
   {
     label: "lightpurple",
-    name: "helllila",
-    color: "#D2D2EB"
+    name: "Pari flieder",
+    color: "#D2D2EB",
+    secondaryColor: [
+      {
+        name: "schwarz",
+        label: "black",
+        color: "#000",
+      }
+    ]
   }
 ];
 
@@ -243,11 +333,6 @@ export const templates = [
     name: "FPR + NbF,<br/>Zitat",
     link: "templates/zitat-externe",
     thumbnailSrc: "../assets/images/templates/zitat-externe.jpg",
-  },
-  {
-    name: "Parität,<br />Slogan",
-    link: "templates/paritaet-slogan",
-    thumbnailSrc: "../assets/images/templates/paritaet-slogan.jpg",
   },
   {
     name: "Parität,<br />Zitat",

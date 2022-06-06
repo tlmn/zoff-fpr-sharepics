@@ -10,7 +10,7 @@ export default ({ children, isThumbnail = false }) => {
       <div
         className={`${
           isThumbnail === false ? `template` : `template--thumbnail`
-        } ${!state.templateScale.isScaled && `relative`}, overflow-hidden`}
+        } ${!state.templateScale.isScaled && `relative`}`}
         style={{
           transform:
             state.templateScale.isScaled &&

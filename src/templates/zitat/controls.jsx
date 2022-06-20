@@ -54,7 +54,6 @@ export default () => {
         >
           <option value="FPR">FPR</option>
           <option value="BFW">BFW</option>
-          <option value="Pari">Pari</option>
           <option value="Pfeil">Pfeil</option>
           <option value="none">keins</option>
         </select>

@@ -60,6 +60,7 @@ export default () => {
                 width={170}
                 className="mr-4 mb-4"
                 fillColor={getColorFromLogoColor(state.data.logo.label)}
+                strokeWidth="6"
               />
             )}
           </div>

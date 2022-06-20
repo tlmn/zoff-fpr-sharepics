@@ -25,8 +25,7 @@ export default () => {
 
       <div
         className="absolute z-20 w-full h-full top-0 left-0 flex flex-col p-3 overflow-hidden"
-        style={{ paddingTop: `${ state.data.subline.content === '' ? 200 : 10}px`,
-                 height: `${ state.data.subline.content === '' ? '43em' : 'auto'}`}}
+        style={{ paddingTop: `10px`, justifyContent: `${state.data.body.position}` }}
       >
         <div
           className="font-normal font-avenir mt-2 break-words"
@@ -89,6 +88,7 @@ export default () => {
                 width={170}
                 className="mr-4 mb-4"
                 fillColor={getUpdatedColor(state.data.text.color)}
+                strokeWidth="5"
               />
             )}
           </div>

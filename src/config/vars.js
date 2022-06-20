@@ -394,22 +394,22 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/paritaet-zitat.jpg",
   },
   {
-    name: "FPR Text + Portrait",
+    name: "FPR Text +<br>Portrait",
     link: "templates/text-portrait",
     thumbnailSrc: "../assets/images/templates/text-portrait.jpg",
   },
   {
-    name: "FPR Bild",
+    name: "FPR<br> Bild",
     link: "templates/bild-logo",
     thumbnailSrc: "../assets/images/templates/bild-logo.jpg",
   },
   {
-    name: "Textkachel Logo + Info",
+    name: "Textkachel<br> Logo + Info",
     link: "templates/text-logo",
     thumbnailSrc: "../assets/images/templates/text-logo.jpg",
   },
   {
-    name: "Textkachel",
+    name: "Text<br>kachel",
     link: "templates/text",
     thumbnailSrc: "../assets/images/templates/text.png",
   },

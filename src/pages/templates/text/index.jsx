@@ -24,7 +24,7 @@ export default () => {
         availableColors: getAvailableSecondaryColors("purple")
       },
       highlight: {
-        active: "underline",
+        active: "background",
         availableHighlights: ["underline", "background"]
       }
     },

@@ -62,6 +62,30 @@ export default () => {
         </select>
       </div>
 
+      <div className="col-span-2 mt-3">
+        <label htmlFor="data.text.color" className="label--inline">
+          Text position
+        </label>
+
+        <select
+          id="data.body.position"
+          onChange={(e) =>
+            updateProperty(
+              { state, setState },
+              "data.body.position",
+              e.target.value
+            )
+          }
+          className="select-css"
+        >
+          {state.data.body.availablePositions.map(
+            (item) =>
+            <option value={Object.values(item)}>{Object.keys(item)}</option>
+          )}
+        </select>
+      </div>
+
+
       <div className="col-span-2  mt-3">
         <label htmlFor="data.logo.type" className="label--inline">
           Logo
